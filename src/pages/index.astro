@@ -1,56 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Sections from '../components/Sections.astro';
+import Footer from '../components/Footer.astro';
 const title = "Sartoria Notarile — Back office notarile e partner IT per studi notarili";
 const description = "Sartoria Notarile: back office giuridico in outsourcing e assistenza informatica per studi notarili. Fascicoli istruiti, bozze di atti, visure interpretate — e un unico partner IT per infrastruttura, cloud, cybersecurity e GDPR. Tempo liberato, costi certi.";
+const ldService = {"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Sartoria Notarile", "url": "https://www.sartorianotarile.it/", "description": "Back office giuridico in outsourcing e servizi IT gestiti (MSP) per studi notarili: fascicoli istruiti, bozze di atti, visure, adempimenti — e infrastruttura, cloud, cybersecurity, GDPR.", "parentOrganization": {"@type": "Organization", "name": "Giamor Group S.r.l."}, "areaServed": ["Emilia-Romagna", "Veneto", "Ravenna", "Bologna", "Forlì-Cesena", "Rimini", "Ferrara", "Modena", "Rovigo", "Italia"], "knowsAbout": ["back office notarile", "outsourcing pratiche notarili", "assistenza informatica studi notarili", "cybersecurity", "GDPR"], "email": "info@sartorianotarile.it", "telephone": "+393884079916"};
+const ldFaq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Il mio studio deve installare un software?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nessuna installazione, nessuna integrazione, nessuna formazione: lo studio condivide documenti e istruzioni via mail o cartella sicura Microsoft 365 e scarica il lavoro finito."}}, {"@type": "Question", "name": "Chi lavora sulle pratiche del mio studio?", "acceptedAnswer": {"@type": "Answer", "text": "Giuristi qualificati e formati sulla prassi notarile, potenziati da un'AI documentale verticale. Ogni consegna passa un doppio controllo, umano e sistemico, prima di arrivare allo studio."}}, {"@type": "Question", "name": "Come viene garantita la riservatezza degli atti?", "acceptedAnswer": {"@type": "Answer", "text": "Tutto il ciclo di lavorazione avviene su infrastruttura Microsoft 365 con dati cifrati e data center UE, NDA su ogni pratica, nomina GDPR come responsabile del trattamento (art. 28) e segregazione dei dati per singolo studio."}}, {"@type": "Question", "name": "Quali sono i tempi di consegna?", "acceptedAnswer": {"@type": "Answer", "text": "Pratiche standard entro 2 giornate lavorative, pratiche complesse in 3–4 giornate, urgenze gestite ad hoc entro 12 ore."}}, {"@type": "Question", "name": "Che cos'è il progetto pilota?", "acceptedAnswer": {"@type": "Answer", "text": "Un test di 4–6 settimane su pratiche reali: lo studio sceglie 2–3 attività, noi le eseguiamo misurando tempi e qualità, e alla fine lo studio riceve una proposta di prezzo certo per ogni attività — il suo primo listino interno. Gli studi pilota hanno condizioni riservate."}}]};
 ---
 <Base title={title} description={description} canonical="/">
-  <script type="application/ld+json" is:inline slot="head">{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Sartoria Notarile",
-  "url": "https://www.sartorianotarile.it/",
-  "description": "Back office giuridico in outsourcing e servizi IT gestiti (MSP) per studi notarili: fascicoli istruiti, bozze di atti, visure, adempimenti — e infrastruttura, cloud, cybersecurity, GDPR.",
-  "parentOrganization": { "@type": "Organization", "name": "Giamor Group S.r.l." },
-  "areaServed": ["Ravenna", "Emilia-Romagna", "Italia"],
-  "knowsAbout": ["back office notarile", "outsourcing pratiche notarili", "assistenza informatica studi notarili", "cybersecurity", "GDPR"],
-  "email": "info@sartorianotarile.it",
-  "telephone": "+393884079916"
-}</script>
-  <script type="application/ld+json" is:inline slot="head">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Il mio studio deve installare un software?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Nessuna installazione, nessuna integrazione, nessuna formazione: lo studio condivide documenti e istruzioni via mail o cartella sicura Microsoft 365 e scarica il lavoro finito." } },
-    { "@type": "Question", "name": "Chi lavora sulle pratiche del mio studio?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Giuristi qualificati e formati sulla prassi notarile, potenziati da un'AI documentale verticale. Ogni consegna passa un doppio controllo, umano e sistemico, prima di arrivare allo studio." } },
-    { "@type": "Question", "name": "Come viene garantita la riservatezza degli atti?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Tutto il ciclo di lavorazione avviene su infrastruttura Microsoft 365 con dati cifrati e data center UE, NDA su ogni pratica, nomina GDPR come responsabile del trattamento (art. 28) e segregazione dei dati per singolo studio." } },
-    { "@type": "Question", "name": "Quali sono i tempi di consegna?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pratiche standard entro 2 giornate lavorative, pratiche complesse in 3–4 giornate, urgenze gestite ad hoc entro 12 ore." } },
-    { "@type": "Question", "name": "Che cos'è il progetto pilota?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Un test di 4–6 settimane su pratiche reali: lo studio sceglie 2–3 attività, noi le eseguiamo misurando tempi e qualità, e alla fine lo studio riceve una proposta di prezzo certo per ogni attività — il suo primo listino interno. Gli studi pilota hanno condizioni riservate." } }
-  ]
-}</script>
-
-
-<nav aria-label="Principale">
-  <div class="wrap nav-in">
-    <a class="logo" href="#top" aria-label="Sartoria Notarile — home">
-      <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></span>
-      <span class="word">Sartoria&nbsp;Notarile</span>
-    </a>
-    <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false">&#9776;</button>
-    <div class="nav-links">
-      <a href="#backoffice">Back office</a>
-      <a href="#it-cyber">IT &amp; Cyber</a>
-      <a href="#come-funziona">Come funziona</a>
-      <a href="#pilota">Progetto pilota</a>
-      <a href="#contatti" class="btn btn-bronze">Parliamone</a>
-    </div>
-  </div>
-</nav>
-
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldService)}></script>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldFaq)}></script>
+<Nav />
 <header class="hero" id="top">
   <div class="hero-in">
     <p class="kicker">Un unico partner per lo studio notarile</p>
@@ -77,149 +38,7 @@ const description = "Sartoria Notarile: back office giuridico in outsourcing e a
   </div>
 </header>
 
-<!-- ================= MISSIONE ================= -->
-<section aria-labelledby="missione">
-  <div class="wrap">
-    <div class="feature" style="margin-bottom:54px">
-      <div class="reveal">
-        <p class="kicker">La nostra missione</p>
-        <h2 class="sec-title" id="missione">Restituire al Notaio il tempo di alto valore,<br><em style="color:var(--bronze)">assorbendo il lavoro ripetitivo dello studio.</em></h2>
-        <p style="color:var(--mute)">Un servizio su misura, tagliato sulla prassi di ogni studio — con la sensibilit&agrave; di un giurista e la precisione di un metodo. Senza cambiare il modo di lavorare dello studio: la firma resta esattamente dove deve stare — nelle mani del Notaio.</p>
-      </div>
-      <div class="img-frame reveal">
-        <img src="img/notaio-firma-atto.webp" alt="Il Notaio firma l'atto nello studio notarile: bozze pronte per il controllo e la firma" width="1200" height="684" loading="lazy">
-      </div>
-    </div>
-    <div class="grid3">
-      <div class="card reveal"><div class="ic" aria-hidden="true">&#9201;</div><h3>Tempo</h3><p>Ore restituite ogni settimana a chi firma e a chi collabora — misurate, non promesse. Pratiche che arrivano sulla scrivania gi&agrave; pronte per la revisione finale.</p></div>
-      <div class="card reveal"><div class="ic" aria-hidden="true">&#10003;</div><h3>Qualit&agrave;</h3><p>Meno errori e pi&ugrave; solidit&agrave;: ogni consegna passa un doppio controllo, umano e sistemico, prima di arrivare allo studio. Clienti pi&ugrave; soddisfatti, stipule senza sorprese.</p></div>
-      <div class="card reveal"><div class="ic" aria-hidden="true">&#8364;</div><h3>Controllo</h3><p>Costi certi per attivit&agrave;: lo studio non compra tempo (incerto), compra attivit&agrave; fatte e finite con tempi e costi noti in anticipo. Ogni stipula con un margine visibile, prima di aprirla.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= BACK OFFICE ================= -->
-<section id="backoffice" style="background:var(--linen)" aria-labelledby="bo-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker">Back office notarile in outsourcing</p>
-      <h2 class="sec-title" id="bo-title">Le attivit&agrave; che possiamo assorbire</h2>
-      <p>Dalle pi&ugrave; immediate a quelle su misura della prassi dello studio: servizi modulari, si parte da uno e si aggiungono gli altri solo se — e quando — servono allo studio.</p>
-    </div>
-    <div class="feature" style="margin-bottom:44px">
-      <div class="img-frame reveal">
-        <img src="img/istruttoria-pratiche-notarili.webp" alt="Istruttoria delle pratiche notarili in outsourcing: contatti con clienti e banche per i documenti mancanti" width="960" height="640" loading="lazy">
-      </div>
-      <div class="reveal">
-        <h3 style="font-family:var(--serif); font-size:26px; font-weight:700; color:var(--ink); margin-bottom:12px">Il lavoro che nessuno vede, fatto da noi</h3>
-        <p style="color:var(--ink2)">Telefonate ai clienti, solleciti alle banche, email ai commercialisti, verifiche sui documenti: &egrave; il lavoro sommerso che tiene occupato lo studio per ore. Il nostro back office lo assorbe per intero — con giuristi dedicati, metodo e riservatezza — e restituisce allo studio pratiche pronte per il controllo di chi firma.</p>
-      </div>
-    </div>
-    <div class="grid3">
-      <div class="card reveal" style="background:var(--paper)"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.27a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></svg></div><h3>Istruttoria e documenti mancanti</h3><p>Inseguiamo noi clienti, banche, commercialisti, avvocati e agenzie: solleciti, verifica di completezza, fascicolo digitale ordinato. Lo studio riceve solo: &laquo;completo, si parte&raquo;.</p></div>
-      <div class="card reveal" style="background:var(--paper)"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div><h3>Controlli documentali</h3><p>Documenti d'identit&agrave;, procure, autorizzazioni, certificazioni urbanistiche, APE: verifica di presenza, validit&agrave; e scadenze con checklist di ci&ograve; che manca — giorni prima della stipula.</p></div>
-      <div class="card reveal" style="background:var(--paper)"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Visure con interpretazione</h3><p>Conservatoria, Catasto, Registro Imprese: visure eseguite e <em>lette</em>. Non il plico: la sintesi — formalit&agrave;, anomalie, punti da verificare.</p></div>
-      <div class="card reveal" style="background:var(--paper)"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M8 21h8"/><path d="M4 7h16"/><path d="m7 7-3 7a3.2 3.2 0 0 0 6 0Z"/><path d="m17 7-3 7a3.2 3.2 0 0 0 6 0Z"/></svg></div><h3>Ricerca giuridica e memo</h3><p>Un quesito, e in poche ore: sintesi, riferimenti, massime e prassi; se serve, un memo di una pagina. La decisione resta al Notaio.</p></div>
-      <div class="card reveal" style="background:var(--paper)"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a.7.7 0 0 1-.6 0C7.5 20.5 4 18 4 13V6.3a1 1 0 0 1 .7-1L11.7 3a1 1 0 0 1 .6 0l7 2.4a1 1 0 0 1 .7.9Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Fascicolo adeguata verifica</h3><p>Antiriciclaggio: raccolta documenti, schede precompilate, titolare effettivo ricostruito con visure alla mano. La valutazione resta al Notaio — in cinque minuti.</p></div>
-      <div class="card reveal" style="background:var(--paper)"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><h3>Bozze di atti e adempimenti</h3><p>Bozze complete sullo stile dello studio con check dei dati e criticit&agrave; segnalate; pratiche Registro Imprese, adempimenti telematici preparati, successioni. L'invio e la firma restano allo studio.</p></div>
-    </div>
-    <div class="statement reveal">
-      <strong>Non vendiamo software e soluzioni.</strong> Tutti propongono software e soluzioni AI — ma un software va usato, e l'AI va saputa usare: in ogni caso, qualcuno deve farlo. Noi vendiamo il servizio chiavi in mano, dalla A alla Z: <span class="gold">Lo studio carica il materiale grezzo e scarica il lavoro finito. Stop.</span> A selezionare e addestrare la migliore AI pensiamo noi.
-    </div>
-  </div>
-</section>
-
-<!-- ================= COME FUNZIONA ================= -->
-<section id="come-funziona" aria-labelledby="cf-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker">Come funziona</p>
-      <h2 class="sec-title" id="cf-title">Nessun software, nessuna integrazione: solo un servizio</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><h3>Invio</h3><p>Lo studio invia i documenti via mail o cartella condivisa sicura Microsoft&nbsp;365, con eventuali istruzioni e note.</p></div>
-      <div class="step reveal"><h3>Lavorazione</h3><p>Giuristi e AI verticale: estrazione dati, istruttoria, redazione, doppio controllo di qualit&agrave; — umano e sistemico.</p></div>
-      <div class="step reveal"><h3>Consegna</h3><p>Bozza, check-list, criticit&agrave;, documenti rinominati e ordinati, fascicolo completo. Tutto pronto per il controllo dello studio.</p></div>
-      <div class="step reveal"><h3>Il controllo del Notaio</h3><p>Il Notaio rivede, modifica ci&ograve; che ritiene e firma. Una revisione sulle osservazioni dello studio &egrave; sempre inclusa.</p></div>
-    </div>
-    <p class="times reveal"><strong>Tempi:</strong> pratiche standard entro 2 giornate lavorative &middot; complesse 3&ndash;4 &middot; urgenze gestite ad hoc entro 12 ore</p>
-  </div>
-</section>
-
-<!-- ================= IT & CYBER (MSP) ================= -->
-<section id="it-cyber" class="dark" aria-labelledby="it-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker">IT, cloud &amp; cybersecurity per studi notarili</p>
-      <h2 class="sec-title" id="it-title">Un unico partner tecnologico.<br>Tutta l'infrastruttura, una sola responsabilit&agrave;.</h2>
-      <p>Lo studio notarile custodisce dati tra i pi&ugrave; sensibili che esistano: atti, patrimoni, identit&agrave;. Gestiamo l'intera tecnologia dello studio con pacchetti studiati ad hoc — un solo fornitore, un solo referente, nessuno scaricabarile tra fornitori diversi.</p>
-    </div>
-    <div class="banner reveal">
-      <img src="img/cybersecurity-studio-notarile.webp" alt="Cybersecurity e protezione dei dati per studi notarili: server sicuri, backup cifrati, difesa da attacchi informatici" width="999" height="583" loading="lazy">
-    </div>
-    <div class="grid3">
-      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a.7.7 0 0 1-.6 0C7.5 20.5 4 18 4 13V6.3a1 1 0 0 1 .7-1L11.7 3a1 1 0 0 1 .6 0l7 2.4a1 1 0 0 1 .7.9Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Cybersecurity</h3><p>Protezione da ransomware e attacchi informatici, monitoraggio continuo, formazione anti-phishing per i collaboratori: la difesa del segreto professionale &egrave; la nostra priorit&agrave; assoluta.</p></div>
-      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div><h3>Backup e continuit&agrave; operativa</h3><p>Copie di sicurezza cifrate e verificate, piani di disaster recovery: lo studio non si ferma mai, nemmeno davanti a un guasto o a un attacco.</p></div>
-      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M8 21h8"/><path d="M4 7h16"/><path d="m7 7-3 7a3.2 3.2 0 0 0 6 0Z"/><path d="m17 7-3 7a3.2 3.2 0 0 0 6 0Z"/></svg></div><h3>Adeguamento GDPR</h3><p>Misure di sicurezza, registri dei trattamenti, gestione dei data breach: la conformit&agrave; &egrave; un obbligo dello studio prima ancora che dei suoi fornitori. Ci pensiamo noi.</p></div>
-      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9Z"/></svg></div><h3>Cloud e Microsoft 365</h3><p>Posta elettronica sicura, condivisione documenti, lavoro da remoto protetto: l'ambiente Microsoft 365 configurato e gestito per le esigenze di uno studio notarile.</p></div>
-      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="7" rx="1.5"/><rect x="3" y="14" width="18" height="7" rx="1.5"/><path d="M7 6.5h.01M7 17.5h.01"/></svg></div><h3>Reti, server e postazioni</h3><p>Infrastruttura sempre efficiente: assistenza proattiva su computer, server e reti, interventi rapidi, aggiornamenti gestiti. I problemi si prevengono, non si rincorrono.</p></div>
-      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="16" r="4"/><path d="m11 13 8.5-8.5"/><path d="M16.5 7.5 19 10"/><path d="m14 10 2 2"/></svg></div><h3>Firma digitale e strumenti telematici</h3><p>Supporto completo su firma digitale, PEC, dispositivi e piattaforme telematiche: gli strumenti del notariato digitale, sempre funzionanti.</p></div>
-    </div>
-    <div class="levers">
-      <div class="lever reveal"><div class="dot" aria-hidden="true">&#10003;</div><div><h4>Protezione del segreto professionale</h4><p>Dati cifrati, accessi tracciati, data center nell'Unione Europea: la riservatezza degli atti trattata come un dovere, non come un'opzione.</p></div></div>
-      <div class="lever reveal"><div class="dot" aria-hidden="true">&#10003;</div><div><h4>Zero fermi di studio</h4><p>Ogni ora di fermo &egrave; una stipula rinviata. Monitoraggio proattivo e intervento rapido per una continuit&agrave; operativa reale.</p></div></div>
-      <div class="lever reveal"><div class="dot" aria-hidden="true">&#10003;</div><div><h4>Pacchetti ad hoc, costi prevedibili</h4><p>Canoni chiari costruiti sulla dimensione dello studio: niente sorprese, niente interventi a chiamata dal costo ignoto.</p></div></div>
-      <div class="lever reveal"><div class="dot" aria-hidden="true">&#10003;</div><div><h4>Un solo referente</h4><p>Rete, cloud, sicurezza, gestionali: quando tutto &egrave; di un unico partner, la responsabilit&agrave; non si scarica mai su &laquo;l'altro fornitore&raquo;.</p></div></div>
-    </div>
-    <div class="statement reveal" style="text-align:center">
-      <strong>Check-up gratuito di sicurezza e conformit&agrave; GDPR:</strong> mezz'ora di un nostro tecnico, un report completo, zero impegno. <a href="#contatti" style="color:var(--bronze-l); font-weight:700">Richiedilo per il tuo studio &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PILOTA ================= -->
-<section id="pilota" aria-labelledby="pi-title">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker">Il progetto pilota</p>
-      <h2 class="sec-title" id="pi-title">Si sceglie, si testa, si misura</h2>
-      <p>La destinazione sono servizi a pacchetto, a scaffale: attivit&agrave; fatte e finite, con tempi e costi noti in anticipo, in abbonamento o carnet. Per arrivarci, i prezzi li costruiamo con gli studi pilota — che godono di vantaggi riservati.</p>
-    </div>
-    <div class="pilot-box">
-      <div class="steps steps-2" style="grid-template-columns:1fr 1fr">
-        <div class="step reveal"><h3>Lo studio sceglie</h3><p>2&ndash;3 attivit&agrave; dal catalogo — o proposte dallo studio stesso — da testare su pratiche reali.</p></div>
-        <div class="step reveal"><h3>Noi eseguiamo</h3><p>4&ndash;6 settimane di lavoro vero, con i tempi e le garanzie del servizio a regime.</p></div>
-        <div class="step reveal"><h3>Misuriamo insieme</h3><p>Tempi effettivi, qualit&agrave;, ore restituite allo studio: tutto tracciato e condiviso.</p></div>
-        <div class="step reveal"><h3>Il listino dello studio</h3><p>Una proposta di prezzo certo per ogni attivit&agrave; testata: il primo listino interno dello studio.</p></div>
-      </div>
-      <aside class="pilot-cond reveal">
-        <h3>Le condizioni del pilota</h3>
-        <ul>
-          <li>Quota di adesione contenuta, interamente recuperabile sul primo pacchetto sottoscritto</li>
-          <li>Nessun vincolo alla fine: decide lo studio se e come proseguire</li>
-          <li>Template, checklist e fascicoli prodotti restano comunque allo studio</li>
-          <li>Un solo impegno richiesto: un giudizio franco al debrief finale</li>
-        </ul>
-      </aside>
-    </div>
-  </div>
-</section>
-
-<!-- ================= FAQ ================= -->
-<section style="background:var(--linen); padding-top:70px; padding-bottom:70px" aria-labelledby="faq-title">
-  <div class="wrap" style="max-width:860px">
-    <div class="sec-head reveal" style="margin-bottom:30px">
-      <p class="kicker">Domande frequenti</p>
-      <h2 class="sec-title" id="faq-title">Quello che gli studi ci chiedono</h2>
-    </div>
-    <details class="reveal"><summary>Il mio studio deve installare un software?</summary><p>No. Nessuna installazione, nessuna integrazione, nessuna formazione: lo studio condivide documenti e istruzioni via mail o cartella sicura Microsoft&nbsp;365 e scarica il lavoro finito.</p></details>
-    <details class="reveal"><summary>Chi lavora sulle pratiche del mio studio?</summary><p>Giuristi qualificati e formati sulla prassi notarile, potenziati da un'AI documentale verticale. Ogni consegna passa un doppio controllo — umano e sistemico — prima di arrivare allo studio.</p></details>
-    <details class="reveal"><summary>Come viene garantita la riservatezza degli atti?</summary><p>Tutto il ciclo di lavorazione avviene su infrastruttura Microsoft&nbsp;365 con dati cifrati e data center UE, NDA su ogni pratica, nomina GDPR come responsabile del trattamento (art.&nbsp;28) e segregazione dei dati per singolo studio.</p></details>
-    <details class="reveal"><summary>Quali sono i tempi di consegna?</summary><p>Pratiche standard entro 2 giornate lavorative, pratiche complesse in 3&ndash;4 giornate, urgenze gestite ad hoc entro 12 ore.</p></details>
-    <details class="reveal"><summary>Che cos'&egrave; il progetto pilota?</summary><p>Un test di 4&ndash;6 settimane su pratiche reali: lo studio sceglie 2&ndash;3 attivit&agrave;, noi le eseguiamo misurando tempi e qualit&agrave;, e alla fine lo studio riceve una proposta di prezzo certo per ogni attivit&agrave; — il suo primo listino interno. Gli studi pilota hanno condizioni riservate.</p></details>
-  </div>
-</section>
-
+<Sections />
 <!-- ================= CTA ================= -->
 <section class="cta-band" id="contatti" aria-labelledby="cta-title">
   <h2 id="cta-title">Quali attivit&agrave; affideresti per prime?<br><span>Scegliamole insieme.</span></h2>
@@ -240,22 +59,5 @@ const description = "Sartoria Notarile: back office giuridico in outsourcing e a
   </div>
 </section>
 
-<footer>
-  <div class="wrap cols">
-    <div>
-      <p class="brand"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>&nbsp; Sartoria Notarile</p>
-      <p>Back office giuridico e servizi IT gestiti per studi notarili.<br>Un progetto <strong style="color:var(--paper)">Giamor Group S.r.l.</strong> &middot; Provincia di Ravenna</p>
-    </div>
-    <div>
-      <p><a href="tel:+393884079916">+39 388 407 9916</a></p>
-      <p><a href="mailto:info@sartorianotarile.it">info@sartorianotarile.it</a></p>
-      <p>Emilia-Romagna &middot; Italia</p>
-    </div>
-    <div style="max-width:380px">
-      <p>Outsourcing pratiche notarili, istruttoria e bozze di atti &middot; assistenza informatica, cloud e cybersecurity per il notariato. I dati dei clienti dello studio restano protetti, cifrati e in ambito UE.</p>
-    </div>
-  </div>
-</footer>
-
-
+<Footer />
 </Base>
