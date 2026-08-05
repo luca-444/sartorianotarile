@@ -1,0 +1,121 @@
+---
+import Base from '../layouts/Base.astro';
+import zone from '../data/zone.json';
+
+export function getStaticPaths() {
+  return zone.map((z) => ({ params: { zona: z.slug }, props: { z } }));
+}
+
+const { z } = Astro.props;
+const title = `Back office notarile a ${z.citta} — outsourcing pratiche e IT per studi notarili in ${z.regione} | Sartoria Notarile`;
+const description = `Back office giuridico per studi notarili a ${z.citta}, in ${z.provincia} e in tutta la regione ${z.regione}: istruttoria pratiche, controlli documentali, visure interpretate, bozze di atti. E assistenza IT, cloud e cybersecurity. Tempi e costi certi, nessun software da installare.`;
+
+const ld = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": `Sartoria Notarile — ${z.citta}`,
+  "url": `https://www.sartorianotarile.it/${z.slug}/`,
+  "description": description,
+  "parentOrganization": { "@type": "Organization", "name": "Giamor Group S.r.l." },
+  "areaServed": [z.citta, z.provincia, z.regione, "Italia"],
+  "email": "info@sartorianotarile.it",
+  "telephone": "+393884079916"
+};
+---
+<Base title={title} description={description} canonical={`/${z.slug}/`}>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ld)}></script>
+
+  <nav aria-label="Principale">
+    <div class="wrap nav-in">
+      <a class="logo" href="/" aria-label="Sartoria Notarile — home">
+        <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></span>
+        <span class="word">Sartoria&nbsp;Notarile</span>
+      </a>
+      <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false">&#9776;</button>
+    <div class="nav-links">
+        <a href="/#backoffice">Back office</a>
+        <a href="/#it-cyber">IT &amp; Cyber</a>
+        <a href="/#pilota">Progetto pilota</a>
+        <a href="#contatti" class="btn btn-bronze">Parliamone</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-in" style="padding-bottom:70px">
+      <p class="kicker">Studi notarili di {z.citta} e {z.provincia} &middot; {z.regione}</p>
+      <h1>Il back office giuridico<br>per gli studi notarili <em>di {z.citta}.</em></h1>
+      <p class="hero-sub">Istruttoria delle pratiche, controlli documentali, visure interpretate e bozze pronte per il controllo del Notaio — pi&ugrave; la gestione completa di IT, cloud e cybersecurity dello studio. Tutto da remoto, senza software da installare.</p>
+      <div class="hero-cta" style="margin-bottom:0">
+        <a class="btn btn-bronze" href="#contatti">Richiedi un incontro</a>
+        <a class="btn btn-paper" href="/">Scopri tutti i servizi</a>
+      </div>
+    </div>
+  </header>
+
+  <section aria-labelledby="local-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Perch&eacute; a {z.citta}</p>
+        <h2 class="sec-title" id="local-title">Un partner su misura per il {z.distretto}</h2>
+        <p>{z.intro} Operiamo da remoto per gli studi notarili di {z.citta} e di tutta la regione {z.regione}, con la stessa qualità e gli stessi tempi certi.</p>
+      </div>
+      <div class="grid3">
+        <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.27a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9Z"/></svg></div><h3>Istruttoria e documenti</h3><p>Inseguiamo noi clienti, banche, commercialisti e agenzie per i documenti mancanti: lo studio riceve il fascicolo completo, ordinato e verificato.</p></div>
+        <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.4 3.6a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><h3>Bozze e adempimenti</h3><p>Bozze di atti sullo stile dello studio, pratiche Registro Imprese, adempimenti telematici preparati, successioni: pronte in 2 giornate lavorative, urgenze entro 12 ore.</p></div>
+        <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.7 8.9a.7.7 0 0 1-.6 0C7.5 20.5 4 18 4 13V6.3a1 1 0 0 1 .7-1L11.7 3a1 1 0 0 1 .6 0l7 2.4a1 1 0 0 1 .7.9Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>IT, cloud e cybersecurity</h3><p>Un unico partner tecnologico per lo studio: reti, backup, Microsoft 365, protezione dai cyber-attacchi e adeguamento GDPR, con pacchetti a canone chiaro.</p></div>
+      </div>
+      <div class="statement reveal">
+        <strong>Come lavoriamo con gli studi notarili di {z.citta} e della regione {z.regione}:</strong> tutto avviene da remoto su canale sicuro Microsoft&nbsp;365 — lo studio carica il materiale grezzo e scarica il lavoro finito. NDA su ogni pratica, nomina GDPR come responsabile del trattamento, dati cifrati in ambito UE. <span class="gold">Nessun software da installare, nessun cambiamento nel modo di lavorare.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--linen); padding-top:70px; padding-bottom:70px" aria-labelledby="pilota-local">
+    <div class="wrap">
+      <div class="sec-head reveal" style="margin-bottom:34px">
+        <p class="kicker">Il progetto pilota</p>
+        <h2 class="sec-title" id="pilota-local">Da provare, prima che da credere</h2>
+        <p>Gli studi notarili di {z.citta} possono aderire al progetto pilota: 2&ndash;3 attivit&agrave; a scelta testate su pratiche reali per 4&ndash;6 settimane, con tempi e qualit&agrave; misurati. Alla fine, lo studio riceve una proposta di prezzo certo per ogni attivit&agrave; testata &mdash; il primo listino interno dello studio. Nessun vincolo, condizioni riservate agli studi pilota.</p>
+      </div>
+      <div class="hero-cta" style="margin-bottom:0">
+        <a class="btn btn-bronze" href="/#pilota">Come funziona il pilota</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="contatti" aria-labelledby="cta-local">
+    <h2 id="cta-local">Parliamone: 20 minuti nel tuo studio<br><span>a {z.citta} o in videochiamata.</span></h2>
+    <p>Nessuna vendita: presentiamo il progetto, ascoltiamo la prassi dello studio e — se ti convince — il pilota si attiva entro una settimana.</p>
+    <div class="hero-cta" style="margin-bottom:0">
+      <a class="btn btn-bronze" href="mailto:info@sartorianotarile.it?subject=Richiesta%20incontro%20%E2%80%94%20Studio%20di%20{z.citta}">Richiedi un incontro</a>
+      <a class="btn btn-paper" href="mailto:info@sartorianotarile.it?subject=Check-up%20GDPR%20gratuito%20%E2%80%94%20{z.citta}">Check-up GDPR gratuito</a>
+    </div>
+    <div class="contact-card">
+      <a href="tel:+393884079916">
+        <span class="lbl">Telefono</span>
+        <span class="val">+39 388 407 9916</span>
+      </a>
+      <a href="mailto:info@sartorianotarile.it">
+        <span class="lbl">Email</span>
+        <span class="val">info@sartorianotarile.it</span>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap cols">
+      <div>
+        <p class="brand"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>&nbsp; Sartoria Notarile</p>
+        <p>Back office giuridico e servizi IT gestiti per studi notarili.<br>Un progetto <strong style="color:var(--paper)">Giamor Group S.r.l.</strong> &middot; Provincia di Ravenna</p>
+      </div>
+      <div>
+        <p><a href="tel:+393884079916">+39 388 407 9916</a></p>
+        <p><a href="mailto:info@sartorianotarile.it">info@sartorianotarile.it</a></p>
+      </div>
+      <div style="max-width:380px">
+        <p>Zone servite: {zone.map((x, i) => (<span>{i > 0 && ' · '}<a href={`/${x.slug}/`}>{x.citta}</a></span>))}</p>
+      </div>
+    </div>
+  </footer>
+</Base>

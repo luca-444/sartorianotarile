@@ -1,0 +1,210 @@
+[
+  {
+    "slug": "ravenna",
+    "citta": "Ravenna",
+    "provincia": "provincia di Ravenna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Ravenna",
+    "intro": "Siamo nati qui: la nostra sede operativa è in provincia di Ravenna e conosciamo gli studi del territorio da dentro, come partner informatico prima ancora che come back office. Per gli studi ravennati siamo anche fisicamente raggiungibili, quando serve."
+  },
+  {
+    "slug": "lugo",
+    "citta": "Lugo",
+    "provincia": "provincia di Ravenna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Ravenna",
+    "intro": "Lugo e la Bassa Romagna sono casa nostra: qui è nato il progetto, e per gli studi notarili del comprensorio lughese possiamo unire il lavoro da remoto alla presenza di persona, dall'avvio del servizio agli incontri di allineamento."
+  },
+  {
+    "slug": "faenza",
+    "citta": "Faenza",
+    "provincia": "provincia di Ravenna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Ravenna",
+    "intro": "Tra manifattura, ceramica e un tessuto di piccole imprese familiari, il territorio faentino genera un flusso costante di atti societari e passaggi generazionali: attività ad alta intensità di istruttoria, che il nostro back office assorbe lasciando allo studio solo il controllo finale."
+  },
+  {
+    "slug": "imola",
+    "citta": "Imola",
+    "provincia": "città metropolitana di Bologna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Bologna",
+    "intro": "Cerniera tra Bologna e la Romagna, il circondario imolese unisce manifattura avanzata, motorsport e un mercato immobiliare vivace: per gli studi del territorio offriamo capacità di redazione e istruttoria elastica, che segue i volumi senza aggiungere costi fissi."
+  },
+  {
+    "slug": "forli",
+    "citta": "Forlì",
+    "provincia": "provincia di Forlì-Cesena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretti Notarili riuniti di Forlì e Rimini",
+    "intro": "L'economia forlivese — manifattura, agroalimentare, servizi — alimenta un flusso regolare di compravendite, mutui e atti d'impresa: il nostro back office prepara fascicoli e bozze mentre lo studio resta concentrato su consulenza e firma."
+  },
+  {
+    "slug": "cesena",
+    "citta": "Cesena",
+    "provincia": "provincia di Forlì-Cesena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretti Notarili riuniti di Forlì e Rimini",
+    "intro": "Il tessuto cesenate di imprese familiari, agroalimentare e ortofrutta genera con regolarità cessioni di quote, nomine e passaggi generazionali: pratiche ad alto contenuto documentale, che consegniamo istruite e pronte per il controllo del Notaio."
+  },
+  {
+    "slug": "bologna",
+    "citta": "Bologna",
+    "provincia": "città metropolitana di Bologna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Bologna",
+    "intro": "Il mercato immobiliare e societario più dinamico della regione produce volumi che mettono sotto pressione anche gli studi più strutturati: per gli studi bolognesi il nostro back office è capacità aggiuntiva immediata nei picchi, senza assunzioni e senza software da adottare."
+  },
+  {
+    "slug": "rimini",
+    "citta": "Rimini",
+    "provincia": "provincia di Rimini",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretti Notarili riuniti di Forlì e Rimini",
+    "intro": "Turismo e ricettività rendono il mercato riminese fortemente stagionale: compravendite di strutture, cessioni d'azienda e mutui si concentrano in pochi mesi. La nostra capacità elastica assorbe i picchi estivi e restituisce allo studio tempi di consegna certi tutto l'anno."
+  },
+  {
+    "slug": "ferrara",
+    "citta": "Ferrara",
+    "provincia": "provincia di Ferrara",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Ferrara",
+    "intro": "Tra patrimonio immobiliare storico e proprietà frazionate, le pratiche ferraresi richiedono spesso ricostruzioni di provenienza e successioni articolate: lavoro documentale paziente, che il nostro back office svolge con metodo e restituisce ordinato e verificato."
+  },
+  {
+    "slug": "modena",
+    "citta": "Modena",
+    "provincia": "provincia di Modena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Modena",
+    "intro": "Nel cuore della motor valley e della meccanica emiliana, gli studi modenesi gestiscono un societario intenso: costituzioni, operazioni straordinarie, patti tra soci. Prepariamo pratiche camerali e bozze sullo stile dello studio, con i volumi che il territorio richiede."
+  },
+  {
+    "slug": "rovigo",
+    "citta": "Rovigo",
+    "provincia": "provincia di Rovigo",
+    "regione": "Veneto",
+    "distretto": "Distretto Notarile di Rovigo",
+    "intro": "Nel Polesine, dove gli studi sono spesso strutture snelle, ogni assenza o picco di lavoro pesa il doppio: il nostro back office da remoto è il collaboratore aggiuntivo che entra in campo solo quando serve, senza costi fissi per lo studio."
+  },
+  {
+    "slug": "trieste",
+    "citta": "Trieste",
+    "provincia": "provincia di Trieste",
+    "regione": "Friuli-Venezia Giulia",
+    "distretto": "Distretti Notarili riuniti di Trieste e Gorizia",
+    "intro": "Porto, assicurazioni e una naturale vocazione internazionale portano negli studi triestini pratiche con parti estere e documentazione multilingue: supportiamo l'istruttoria e la preparazione documentale anche nei casi con elementi transfrontalieri."
+  },
+  {
+    "slug": "gorizia",
+    "citta": "Gorizia",
+    "provincia": "provincia di Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "distretto": "Distretti Notarili riuniti di Trieste e Gorizia",
+    "intro": "Territorio di confine per storia e per economia, il goriziano vede con frequenza pratiche con parti slovene e patrimoni a cavallo della frontiera: prepariamo fascicoli completi e ordinati anche quando la raccolta documentale attraversa due ordinamenti."
+  },
+  {
+    "slug": "udine",
+    "citta": "Udine",
+    "provincia": "provincia di Udine",
+    "regione": "Friuli-Venezia Giulia",
+    "distretto": "Distretto Notarile di Udine",
+    "intro": "La provincia più estesa del Friuli unisce distretti manifatturieri storici e un immobiliare diffuso dai colli alla pianura: per gli studi udinesi assorbiamo il lavoro ripetitivo di istruttoria e redazione, con tempi certi anche sulle pratiche più documentali."
+  },
+  {
+    "slug": "pordenone",
+    "citta": "Pordenone",
+    "provincia": "provincia di Pordenone",
+    "regione": "Friuli-Venezia Giulia",
+    "distretto": "Distretto Notarile di Pordenone",
+    "intro": "Il pordenonese è terra di industria e componentistica: un tessuto d'impresa che genera societario ricorrente — costituzioni, nomine, cessioni — perfetto per la standardizzazione. Consegniamo pratiche pronte per il deposito, sullo stile dello studio."
+  },
+  {
+    "slug": "monfalcone",
+    "citta": "Monfalcone",
+    "provincia": "provincia di Gorizia",
+    "regione": "Friuli-Venezia Giulia",
+    "distretto": "Distretti Notarili riuniti di Trieste e Gorizia",
+    "intro": "La città dei cantieri vive di navalmeccanica e del suo indotto: un tessuto che genera compravendite residenziali continue e pratiche con parti di provenienza internazionale. Prepariamo fascicoli completi e verificati anche quando la documentazione arriva da lontano."
+  },
+  {
+    "slug": "carpi",
+    "citta": "Carpi",
+    "provincia": "provincia di Modena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Modena",
+    "intro": "Il distretto del tessile-abbigliamento carpigiano è fatto di imprese familiari che crescono, si trasformano e passano di generazione: cessioni di quote, nomine e operazioni societarie che consegniamo istruite, con la pratica camerale pronta per il deposito."
+  },
+  {
+    "slug": "casalecchio-di-reno",
+    "citta": "Casalecchio di Reno",
+    "provincia": "città metropolitana di Bologna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Bologna",
+    "intro": "Porta d'ingresso della cintura bolognese, tra direzionale, commercio e un residenziale sempre richiesto: per gli studi di Casalecchio e dintorni assorbiamo l'istruttoria di compravendite e mutui, restituendo pratiche pronte per il controllo del Notaio."
+  },
+  {
+    "slug": "san-lazzaro-di-savena",
+    "citta": "San Lazzaro di Savena",
+    "provincia": "città metropolitana di Bologna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Bologna",
+    "intro": "Tra le mete residenziali più richieste dell'area bolognese, San Lazzaro genera un flusso costante di compravendite familiari e mutui: pratiche standard ad alta frequenza, ideali per un back office che lavora con metodo e tempi certi."
+  },
+  {
+    "slug": "cervia",
+    "citta": "Cervia",
+    "provincia": "provincia di Ravenna",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Ravenna",
+    "intro": "Tra saline, pinete e riviera, il mercato cervese è fatto di seconde case e attività turistiche con una stagionalità marcata: la nostra capacità elastica — e la vicinanza, essendo di casa in provincia di Ravenna — assorbe i picchi primaverili ed estivi dello studio."
+  },
+  {
+    "slug": "riccione",
+    "citta": "Riccione",
+    "provincia": "provincia di Rimini",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretti Notarili riuniti di Forlì e Rimini",
+    "intro": "Capitale della riviera, Riccione concentra compravendite di alberghi, cessioni di attività ricettive e seconde case in poche settimane l'anno: quando il lavoro arriva tutto insieme, il nostro back office è la capacità aggiuntiva che tiene i tempi di consegna sotto controllo."
+  },
+  {
+    "slug": "formigine",
+    "citta": "Formigine",
+    "provincia": "provincia di Modena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Modena",
+    "intro": "Tra il capoluogo e il comprensorio ceramico, Formigine unisce un residenziale di qualità a un tessuto di imprese e professionisti: compravendite, mutui e societario ricorrente che consegniamo istruiti, lasciando allo studio solo la revisione finale."
+  },
+  {
+    "slug": "sassuolo",
+    "citta": "Sassuolo",
+    "provincia": "provincia di Modena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Modena",
+    "intro": "Capitale mondiale della ceramica, Sassuolo esprime un societario industriale intenso: operazioni sul capitale, patti tra soci, riorganizzazioni di gruppo. Prepariamo bozze e pratiche camerali sullo stile dello studio, con la precisione che il distretto pretende."
+  },
+  {
+    "slug": "cento",
+    "citta": "Cento",
+    "provincia": "provincia di Ferrara",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Ferrara",
+    "intro": "Crocevia tra Ferrara, Bologna e Modena, il centese è terra di meccanica e imprese manifatturiere: per gli studi del territorio gestiamo l'istruttoria documentale di atti d'impresa e immobiliari, con fascicoli ordinati e criticità già segnalate."
+  },
+  {
+    "slug": "castelfranco-emilia",
+    "citta": "Castelfranco Emilia",
+    "provincia": "provincia di Modena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Modena",
+    "intro": "Lungo la via Emilia tra Modena e Bologna, Castelfranco unisce agroalimentare, logistica e un residenziale in crescita: un mix di pratiche immobiliari e societarie che il nostro back office prepara con tempi certi, anche nei periodi di punta."
+  },
+  {
+    "slug": "vignola",
+    "citta": "Vignola",
+    "provincia": "provincia di Modena",
+    "regione": "Emilia-Romagna",
+    "distretto": "Distretto Notarile di Modena",
+    "intro": "Tra le colline della ciliegia e un tessuto di imprese agricole e familiari, il vignolese genera successioni, divisioni e passaggi generazionali ad alto contenuto documentale: il lavoro paziente di raccolta e verifica lo facciamo noi, lo studio riceve il fascicolo pronto."
+  }
+]
