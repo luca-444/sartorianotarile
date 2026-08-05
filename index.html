@@ -228,6 +228,16 @@
     .feature{gap:24px}
     .levers{gap:16px}
   }
+
+  /* ---------- doors row alignment (subgrid) ---------- */
+  @supports (grid-template-rows: subgrid) {
+    @media (min-width: 761px) {
+      .doors{grid-template-rows:auto auto 1fr auto}
+      .door{display:grid; grid-template-rows:subgrid; grid-row:span 4; row-gap:0; align-items:start}
+      .door p{margin-bottom:0}
+      .door a{align-self:end}
+    }
+  }
 </style>
 </head>
 <body>
