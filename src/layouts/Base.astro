@@ -217,6 +217,23 @@ const canonicalURL = new URL(canonical, Astro.site);
       .door a{align-self:end}
     }
   }
+
+  /* ---------- comuni serviti ---------- */
+  .comuni-grid{list-style:none; display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:0 auto 40px; max-width:940px}
+  .comuni-grid li{background:var(--paper); border:1px solid var(--hair); border-radius:100px; padding:9px 18px; font-size:14.5px; font-weight:600; color:var(--ink2)}
+  .upgrade{background:var(--ink); border:1px solid var(--bronze); border-radius:6px; padding:32px 34px; max-width:940px; margin:0 auto}
+  .upgrade .up-title{font-family:var(--serif); font-size:26px; font-weight:700; color:var(--paper); margin-bottom:10px}
+  .upgrade .up-text{color:var(--dark-text); font-size:15.5px; margin-bottom:22px; max-width:720px}
+  .upgrade .btn-ghost{border-color:var(--bronze-l); color:var(--bronze-l)}
+  .upgrade .btn-ghost:hover{background:var(--bronze-l); color:var(--ink)}
+  @media(max-width:640px){
+    .comuni-grid{gap:8px; margin-bottom:28px}
+    .comuni-grid li{padding:7px 14px; font-size:13.5px}
+    .upgrade{padding:24px 20px}
+    .upgrade .up-title{font-size:22px}
+    .upgrade .hero-cta{flex-direction:column}
+    .upgrade .hero-cta .btn{width:100%; text-align:center}
+  }
 </style>
 </head>
 <body>
