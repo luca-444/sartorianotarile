@@ -83,7 +83,7 @@
   .btn-ghost:hover{background:var(--bronze); color:#fff}
   .btn-paper{background:var(--paper); color:var(--ink)}
   .btn-paper:hover{background:var(--linen)}
-  @media(max-width:840px){ .nav-links a:not(.btn){display:none} }
+  
 
   /* ---------- hero ---------- */
   header.hero{background:var(--ink); color:var(--paper); position:relative; overflow:hidden}
@@ -199,6 +199,35 @@
   @media(max-width:640px){ .banner img{height:220px} }
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease}
   .reveal.in{opacity:1; transform:none}
+
+  /* ---------- mobile refinements ---------- */
+  html{-webkit-text-size-adjust:100%}
+  .nav-toggle{display:none; background:none; border:1px solid var(--hair); border-radius:4px; font-size:20px; line-height:1; padding:7px 11px; color:var(--ink); cursor:pointer}
+  @media(max-width:840px){
+    .nav-toggle{display:block}
+    .nav-links{display:none; position:absolute; top:66px; left:0; right:0; background:rgba(255,255,255,.98); border-bottom:1px solid var(--hair); flex-direction:column; align-items:stretch; padding:14px 24px 18px; gap:16px; box-shadow:0 12px 24px rgba(38,34,30,.08)}
+    .nav-links.open{display:flex}
+    .nav-links a{display:block}
+    .nav-links .btn{text-align:center}
+  }
+  @media(max-width:640px){
+    section{padding:56px 0}
+    .sec-head{margin-bottom:36px}
+    .hero-in{padding-top:56px}
+    h1{line-height:1.15}
+    .hero-sub{font-size:16.5px}
+    .door{padding:26px 22px}
+    .card{padding:22px 20px}
+    .statement{padding:20px 18px; font-size:15px}
+    .step{padding:20px 18px}
+    .steps-2{grid-template-columns:1fr !important}
+    .pilot-cond{padding:24px 20px}
+    .cta-band{padding:64px 20px}
+    .banner{margin-bottom:32px}
+    footer .cols{flex-direction:column; gap:20px}
+    .feature{gap:24px}
+    .levers{gap:16px}
+  }
 </style>
 </head>
 <body>
@@ -209,6 +238,7 @@
       <span class="mark" aria-hidden="true">&#9986;</span>
       <span class="word">Sartoria&nbsp;Notarile</span>
     </a>
+    <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false">&#9776;</button>
     <div class="nav-links">
       <a href="#backoffice">Back office</a>
       <a href="#it-cyber">IT &amp; Cyber</a>
@@ -302,7 +332,7 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <p class="kicker">Come funziona</p>
-      <h2 class="sec-title" id="cf-title">Nessun software, un servizio completo</h2>
+      <h2 class="sec-title" id="cf-title">Nessun software, nessuna integrazione: solo un servizio</h2>
     </div>
     <div class="steps">
       <div class="step reveal"><h3>Invio</h3><p>Lo studio invia i documenti via mail o cartella condivisa sicura Microsoft&nbsp;365, con eventuali istruzioni e note.</p></div>
@@ -354,7 +384,7 @@
       <p>La destinazione sono servizi a pacchetto, a scaffale: attivit&agrave; fatte e finite, con tempi e costi noti in anticipo, in abbonamento o carnet. Per arrivarci, i prezzi li costruiamo con gli studi pilota — che godono di vantaggi riservati.</p>
     </div>
     <div class="pilot-box">
-      <div class="steps" style="grid-template-columns:1fr 1fr">
+      <div class="steps steps-2" style="grid-template-columns:1fr 1fr">
         <div class="step reveal"><h3>Lo studio sceglie</h3><p>2&ndash;3 attivit&agrave; dal catalogo — o proposte dallo studio stesso — da testare su pratiche reali.</p></div>
         <div class="step reveal"><h3>Noi eseguiamo</h3><p>4&ndash;6 settimane di lavoro vero, con i tempi e le garanzie del servizio a regime.</p></div>
         <div class="step reveal"><h3>Misuriamo insieme</h3><p>Tempi effettivi, qualit&agrave;, ore restituite allo studio: tutto tracciato e condiviso.</p></div>
@@ -430,6 +460,19 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target);} });
   },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  const t = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (t && links) {
+    t.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      t.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open'); t.setAttribute('aria-expanded', 'false');
+    }));
+  }
+
 </script>
 </body>
 </html>
