@@ -1,0 +1,25 @@
+---
+import zone from '../data/zone.json';
+const regioni = [...new Set(zone.map(z => z.regione))];
+---
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p class="brand"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>&nbsp; Sartoria Notarile</p>
+      <p>Back office giuridico e servizi IT gestiti per studi notarili.<br>Un progetto <strong style="color:var(--paper)">Giamor Group S.r.l.</strong> &middot; Provincia di Ravenna</p>
+    </div>
+    <div>
+      <p><a href="tel:+393884079916">+39 388 407 9916</a></p>
+      <p><a href="mailto:info@sartorianotarile.it">info@sartorianotarile.it</a></p>
+    </div>
+    <div style="max-width:420px">
+      <p style="color:var(--paper); margin-bottom:6px">Province servite</p>
+      {regioni.map(r => (
+        <p style="margin-bottom:6px">
+          {zone.filter(z => z.regione === r).map((z, i) => (<span>{i > 0 && ' \u00b7 '}<a href={`/${z.slug}/`}>{z.nome}</a></span>))}
+        </p>
+      ))}
+      <p style="margin-top:10px">Outsourcing pratiche notarili, istruttoria e bozze di atti &middot; assistenza informatica, cloud e cybersecurity per il notariato.</p>
+    </div>
+  </div>
+</footer>
