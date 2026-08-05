@@ -71,7 +71,8 @@
   nav{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--hair)}
   .nav-in{display:flex; align-items:center; justify-content:space-between; height:66px}
   .logo{display:flex; align-items:baseline; gap:10px; text-decoration:none}
-  .logo .mark{font-family:var(--serif); font-size:26px; color:var(--bronze); transform:rotate(-90deg); display:inline-block}
+  .logo .mark{color:var(--bronze); transform:rotate(-90deg); display:inline-flex; align-items:center}
+  footer .brand svg{color:var(--bronze); vertical-align:-2px}
   .logo .word{font-family:var(--serif); font-weight:600; font-size:20px; letter-spacing:.14em; color:var(--ink); text-transform:uppercase}
   .nav-links{display:flex; gap:26px; align-items:center}
   .nav-links a{font-size:13.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); text-decoration:none}
@@ -245,7 +246,7 @@
 <nav aria-label="Principale">
   <div class="wrap nav-in">
     <a class="logo" href="#top" aria-label="Sartoria Notarile — home">
-      <span class="mark" aria-hidden="true">&#9986;</span>
+      <span class="mark" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg></span>
       <span class="word">Sartoria&nbsp;Notarile</span>
     </a>
     <button class="nav-toggle" aria-label="Apri il menu" aria-expanded="false">&#9776;</button>
@@ -451,7 +452,7 @@
 <footer>
   <div class="wrap cols">
     <div>
-      <p class="brand">&#9986;&nbsp; Sartoria Notarile</p>
+      <p class="brand"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>&nbsp; Sartoria Notarile</p>
       <p>Back office giuridico e servizi IT gestiti per studi notarili.<br>Un progetto <strong style="color:var(--paper)">Giamor Group S.r.l.</strong> &middot; Provincia di Ravenna</p>
     </div>
     <div>
