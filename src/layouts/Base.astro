@@ -13,6 +13,7 @@ const canonicalURL = new URL(canonical, Astro.site);
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content={description}>
+<meta name="keywords" content="servizi per studi notarili, back office notarile, segreteria esternalizzata studio notarile, outsourcing segreteria notarile, supporto amministrativo studio notarile, collaboratore notarile esterno, gestione documentale studio notarile, assistenza informatica studi notarili, cybersecurity studio notarile">
 <link rel="canonical" href={canonicalURL}>
 <meta property="og:type" content="website">
 <meta property="og:title" content={title}>
@@ -245,6 +246,59 @@ const canonicalURL = new URL(canonical, Astro.site);
   .legal li{margin-bottom:8px; font-size:15.5px}
   .legal-date{margin-top:34px; padding-top:20px; border-top:1px solid var(--hair); color:var(--mute); font-size:14.5px}
   .footer-legal{border-top:1px solid var(--dark-hair); margin-top:26px; padding-top:18px; font-size:12.5px; line-height:1.7}
+
+  /* ---------- modello: confronto ---------- */
+  .vs{display:grid; grid-template-columns:190px 1fr 1fr; gap:0; margin-top:8px; border:1px solid var(--dark-hair); border-radius:6px; overflow:hidden}
+  .vs-head{padding:14px 20px; font-size:11.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase}
+  .vs-head.vs-a{grid-column:2; background:#2A2620; color:var(--dark-mute)}
+  .vs-head.vs-b{grid-column:3; background:var(--bronze); color:#fff}
+  .vs-row{display:contents}
+  .vs-row .vs-lbl{padding:16px 20px; font-family:var(--serif); font-size:15px; font-weight:700; color:var(--paper); border-top:1px solid var(--dark-hair)}
+  .vs-row .vs-a{padding:16px 20px; font-size:14px; color:var(--dark-mute); border-top:1px solid var(--dark-hair); background:#2A2620}
+  .vs-row .vs-b{padding:16px 20px; font-size:14px; color:var(--paper); font-weight:600; border-top:1px solid var(--dark-hair); background:#332D26}
+  @media(max-width:760px){
+    .vs{grid-template-columns:1fr; border:none; gap:14px}
+    .vs-head{display:none}
+    .vs-row{display:block; border:1px solid var(--dark-hair); border-radius:6px; overflow:hidden}
+    .vs-row .vs-lbl{display:block; border-top:none; background:#2A2620; font-size:14px; padding:12px 16px}
+    .vs-row .vs-a, .vs-row .vs-b{display:block; padding:12px 16px; border-top:1px solid var(--dark-hair)}
+    .vs-row .vs-a::before{content:'Software: '; font-weight:700; color:var(--dark-mute)}
+    .vs-row .vs-b::before{content:'Con noi: '; font-weight:700; color:var(--bronze-l)}
+  }
+
+  /* ---------- ricevuta di consegna ---------- */
+  .delivery{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-top:52px; padding-top:44px; border-top:1px solid var(--hair)}
+  .dl-side h3{font-family:var(--serif); font-size:27px; font-weight:700; color:var(--ink); margin:12px 0 12px}
+  .dl-side p{color:var(--mute); font-size:15.5px}
+  .dl-card{background:var(--ink); border:1px solid var(--bronze); border-radius:6px; padding:26px 28px}
+  .dl-title{font-family:var(--serif); font-size:19px; font-weight:700; color:var(--paper); padding-bottom:14px; border-bottom:1px solid var(--dark-hair); margin-bottom:6px}
+  .dl-card ul{list-style:none}
+  .dl-card li{display:flex; justify-content:space-between; gap:16px; padding:9px 0; border-bottom:1px solid rgba(74,66,56,.5); font-size:14.5px}
+  .dl-card li span{color:var(--dark-mute)}
+  .dl-card li b{color:var(--bronze-l); font-weight:700; text-align:right}
+  .dl-foot{margin-top:16px; font-size:12.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mute)}
+  @media(max-width:840px){ .delivery{grid-template-columns:1fr; gap:26px} }
+  @media(max-width:640px){ .dl-card{padding:20px 18px} .dl-side h3{font-size:23px} }
+
+  /* ---------- pipeline presa in carico ---------- */
+  .flow{display:grid; grid-template-columns:repeat(4,1fr); gap:22px}
+  @media(max-width:1000px){ .flow{grid-template-columns:1fr 1fr} }
+  @media(max-width:620px){ .flow{grid-template-columns:1fr} }
+  .fl{background:var(--paper); border:1px solid var(--hair); border-radius:6px; padding:26px 24px; display:flex; flex-direction:column}
+  .fl-n{font-family:var(--serif); font-size:32px; font-weight:600; color:var(--bronze-l); line-height:1; margin-bottom:10px}
+  .fl h3{font-family:var(--serif); font-size:20px; font-weight:700; color:var(--ink); margin-bottom:10px; line-height:1.2}
+  .fl p{font-size:14.2px; color:var(--ink2)}
+  .fl-out{margin-top:auto; padding-top:14px; border-top:1px solid var(--hair); font-size:13px !important; color:var(--bronze) !important; font-weight:600; font-style:italic}
+  .fl-out:not(:first-child){margin-top:16px}
+
+  /* ---------- coordinamento ---------- */
+  .coord{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-top:52px; background:var(--paper); border:1px solid var(--hair); border-radius:6px; padding:34px 36px}
+  @media(max-width:840px){ .coord{grid-template-columns:1fr; gap:24px; padding:26px 22px} }
+  .coord h3{font-family:var(--serif); font-size:26px; font-weight:700; color:var(--ink); margin:10px 0 12px}
+  .coord p{color:var(--mute); font-size:15.5px}
+  .chips{list-style:none; display:flex; flex-wrap:wrap; gap:10px}
+  .chips li{background:var(--linen); border:1px solid var(--hair); border-radius:100px; padding:9px 18px; font-size:14.5px; font-weight:600; color:var(--ink2)}
+  @media(max-width:640px){ .chips li{padding:7px 14px; font-size:13.5px} }
 </style>
 </head>
 <body>
