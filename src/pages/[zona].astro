@@ -11,8 +11,8 @@ export function getStaticPaths() {
 
 const { z } = Astro.props;
 const primi = z.comuni.slice(0, 4).join(', ');
-const title = `Back office notarile in provincia di ${z.nome} — outsourcing pratiche e IT per studi notarili in ${z.regione} | Sartoria Notarile`;
-const description = `Back office giuridico per studi notarili nella ${z.provincia} e in ${z.regione}: istruttoria pratiche, controlli documentali, visure interpretate, bozze di atti. E assistenza IT, cloud e cybersecurity. Attivi a ${primi} e in tutta la provincia.`;
+const title = `Servizi per studi notarili in provincia di ${z.nome} — back office, segreteria esternalizzata e IT in ${z.regione} | Sartoria Notarile`;
+const description = `Supporto operativo per studi notarili nella ${z.provincia} e in ${z.regione}: presa in carico delle richieste, preventivi, raccolta documentale, solleciti, fascicoli istruiti e bozze. E assistenza IT, cloud e cybersecurity. Attivi a ${primi} e in tutta la provincia.`;
 
 const ld = {
   "@context": "https://schema.org",
@@ -34,8 +34,8 @@ const ld = {
   <header class="hero">
     <div class="hero-in" style="padding-bottom:34px">
       <p class="kicker">Studi notarili &middot; {z.provincia} &middot; {z.regione}</p>
-      <h1>Il back office giuridico<br>per gli studi notarili <em>di {z.nome}.</em></h1>
-      <p class="hero-sub">Istruttoria delle pratiche, controlli documentali, visure interpretate e bozze pronte per il controllo del Notaio — pi&ugrave; la gestione completa di IT, cloud e cybersecurity dello studio. Tutto da remoto, senza software da installare.</p>
+      <h1>Studi notarili di {z.nome}:<br>mandateci le pratiche, <em>ve le restituiamo pronte.</em></h1>
+      <p class="hero-sub">Il reparto operativo esterno dello studio: istruttoria, controlli documentali, visure interpretate e bozze pronte per il controllo del Notaio — pi&ugrave; la gestione completa di IT, cloud e cybersecurity. Tutto da remoto, senza software da installare.</p>
     </div>
     <div class="hero-cta-row">
       <a class="btn btn-bronze" href="#comuni">Fai l'upgrade del tuo studio</a>
