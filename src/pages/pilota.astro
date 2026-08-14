@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
+const title = "Progetto pilota — testa il servizio su pratiche reali | Sartoria Notarile";
+const description = "Il progetto pilota di Sartoria Notarile: lo studio sceglie 2-3 attività, le testiamo su pratiche reali per 4-6 settimane misurando tempi e qualità, e alla fine riceve una proposta di prezzo certo per ogni attività. Nessun vincolo.";
+---
+<Base title={title} description={description} canonical="/pilota/">
+  <Nav />
+  <header class="hero">
+    <div class="hero-in" style="padding-bottom:60px">
+      <p class="kicker">Il progetto pilota</p>
+      <h1>Da provare,<br><em>prima che da credere.</em></h1>
+      <p class="hero-sub">Quattro-sei settimane su pratiche reali, con tempi e qualit&agrave; misurati. Alla fine lo studio riceve il suo primo listino interno: un prezzo certo per ogni attivit&agrave; testata. Nessun vincolo, condizioni riservate agli studi pilota.</p>
+    </div>
+  </header>
+<!-- ================= PILOTA ================= -->
+<section id="pilota">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker">Come funziona</p>
+      <h2 class="sec-title" id="pi-title">Si sceglie, si testa, si misura</h2>
+      <p>La destinazione sono servizi a pacchetto, a scaffale: attivit&agrave; fatte e finite, con tempi e costi noti in anticipo, in abbonamento o carnet. Per arrivarci, i prezzi li costruiamo con gli studi pilota — che godono di vantaggi riservati. <a href="/costi/">Come funziona il prezzo &rarr;</a></p>
+    </div>
+    <div class="pilot-box">
+      <div class="steps steps-2" style="grid-template-columns:1fr 1fr">
+        <div class="step reveal"><h3>Lo studio sceglie</h3><p>2&ndash;3 attivit&agrave; dal catalogo — o proposte dallo studio stesso — da testare su pratiche reali.</p></div>
+        <div class="step reveal"><h3>Noi eseguiamo</h3><p>4&ndash;6 settimane di lavoro vero, con i tempi e le garanzie del servizio a regime.</p></div>
+        <div class="step reveal"><h3>Misuriamo insieme</h3><p>Tempi effettivi, qualit&agrave;, ore restituite allo studio: tutto tracciato e condiviso.</p></div>
+        <div class="step reveal"><h3>Il listino dello studio</h3><p>Una proposta di prezzo certo per ogni attivit&agrave; testata: il primo listino interno dello studio.</p></div>
+      </div>
+      <aside class="pilot-cond reveal">
+        <h3>Le condizioni del pilota</h3>
+        <ul>
+          <li>Quota di adesione contenuta, interamente recuperabile sul primo pacchetto sottoscritto</li>
+          <li>Nessun vincolo alla fine: decide lo studio se e come proseguire</li>
+          <li>Template, checklist e fascicoli prodotti restano comunque allo studio</li>
+          <li>Un solo impegno richiesto: un giudizio franco al debrief finale</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+
+  <section style="background:var(--linen); border-top:1px solid var(--hair)">
+    <div class="wrap" style="max-width:900px">
+      <div class="sec-head reveal">
+        <p class="kicker">Perch&eacute; esiste il pilota</p>
+        <h2 class="sec-title">I prezzi si costruiscono sui dati, non a listino</h2>
+        <p>Ogni studio ha volumi, prassi e tipologie di atto diverse: un listino generico sarebbe sbagliato per eccesso o per difetto. Il pilota serve a misurare quanto tempo assorbono davvero le attivit&agrave; nel Suo studio e a costruire un prezzo che rifletta la realt&agrave;, non una media di mercato.</p>
+      </div>
+      <div class="grid3">
+        <div class="card reveal"><h3 style="margin-top:0">Cosa misuriamo</h3><p>Tempi effettivi per attivit&agrave;, numero di contatti e solleciti necessari, iterazioni con lo studio, tempo restituito ai collaboratori e al Notaio.</p></div>
+        <div class="card reveal"><h3 style="margin-top:0">Cosa riceve lo studio</h3><p>Le attivit&agrave; svolte, un report con i tempi misurati e il confronto con il costo interno stimato, e una proposta di prezzo certo per ciascuna attivit&agrave;.</p></div>
+        <div class="card reveal"><h3 style="margin-top:0">Cosa resta comunque</h3><p>Template, checklist, procedure e fascicoli prodotti restano allo studio anche se il rapporto non prosegue: il pilota non lascia mai a mani vuote.</p></div>
+      </div>
+      <p style="text-align:center; margin-top:30px"><a href="/costi/" style="font-weight:700">Come funziona il prezzo a regime &rarr;</a></p>
+    </div>
+  </section>
+  <Cta titolo="Quali attivit&agrave; testeresti per prime?" testo="Quindici minuti al telefono per capire se il pilota ha senso per il tuo studio e da quali attivit&agrave; conviene partire. Nessun impegno." />
+  <Footer />
+</Base>
