@@ -1,1 +1,14 @@
-
+---
+const {
+  titolo = "Quindici minuti al telefono, senza impegno",
+  testo = "Nessuna presentazione commerciale: facciamo tre domande sul tuo studio e ti diciamo con franchezza se possiamo esserti utili. Se la risposta è no, te lo diciamo."
+} = Astro.props;
+---
+<section class="cta-band">
+  <h2 style="font-size:clamp(26px,3.2vw,38px)">{titolo}</h2>
+  <p>{testo}</p>
+  <div class="hero-cta" style="margin-bottom:0">
+    <a class="btn btn-bronze" href="tel:+393884079916">Chiama il 388 407 9916</a>
+    <a class="btn btn-paper" href="/contatti/">Scrivici</a>
+  </div>
+</section>
