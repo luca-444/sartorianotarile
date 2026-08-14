@@ -52,8 +52,8 @@ const canonicalURL = new URL(canonical, Astro.site);
   .logo .mark{color:var(--bronze); display:inline-flex; align-items:center; align-self:center}
   footer .brand svg{color:var(--bronze); vertical-align:-2px}
   .logo .word{font-family:var(--serif); font-weight:600; font-size:20px; letter-spacing:.14em; color:var(--ink); text-transform:uppercase}
-  .nav-links{display:flex; gap:26px; align-items:center}
-  .nav-links a{font-size:13.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); text-decoration:none}
+  .nav-links{display:flex; gap:20px; align-items:center}
+  .nav-links a{font-size:12.8px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--ink2); text-decoration:none}
   .nav-links a:hover{color:var(--bronze)}
   .btn{display:inline-block; font-family:var(--sans); font-weight:700; font-size:14px; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; padding:13px 26px; border-radius:3px; transition:background .2s,color .2s,border-color .2s; cursor:pointer; border:1px solid transparent}
   .btn-bronze{background:var(--bronze); color:#fff}
@@ -183,7 +183,7 @@ const canonicalURL = new URL(canonical, Astro.site);
   /* ---------- mobile refinements ---------- */
   html{-webkit-text-size-adjust:100%}
   .nav-toggle{display:none; background:none; border:1px solid var(--hair); border-radius:4px; font-size:20px; line-height:1; padding:7px 11px; color:var(--ink); cursor:pointer}
-  @media(max-width:840px){
+  @media(max-width:1080px){
     .nav-toggle{display:block}
     .nav-links{display:none; position:absolute; top:66px; left:0; right:0; background:rgba(255,255,255,.98); border-bottom:1px solid var(--hair); flex-direction:column; align-items:stretch; padding:14px 24px 18px; gap:16px; box-shadow:0 12px 24px rgba(38,34,30,.08)}
     .nav-links.open{display:flex}
@@ -299,6 +299,49 @@ const canonicalURL = new URL(canonical, Astro.site);
   .chips{list-style:none; display:flex; flex-wrap:wrap; gap:10px}
   .chips li{background:var(--linen); border:1px solid var(--hair); border-radius:100px; padding:9px 18px; font-size:14.5px; font-weight:600; color:var(--ink2)}
   @media(max-width:640px){ .chips li{padding:7px 14px; font-size:13.5px} }
+
+  /* ---------- guide / articoli ---------- */
+  .read{max-width:790px; margin:0 auto; padding:0 24px}
+  .art{padding:54px 0 26px}
+  .art .meta{font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--bronze); margin-bottom:16px}
+  .art h1{font-family:var(--serif); font-weight:600; font-size:clamp(30px,4.2vw,46px); line-height:1.14; color:var(--ink); margin-bottom:20px}
+  .art .lead{font-size:19px; color:var(--mute); margin-bottom:8px; line-height:1.6}
+  .art h2{font-family:var(--serif); font-weight:700; font-size:26px; color:var(--ink); margin:44px 0 12px; line-height:1.25}
+  .art h3{font-family:var(--serif); font-weight:700; font-size:20px; color:var(--ink); margin:28px 0 8px}
+  .art p{margin-bottom:15px; font-size:16.5px; color:var(--ink2); line-height:1.7}
+  .art ul, .art ol{margin:0 0 18px 24px}
+  .art li{margin-bottom:9px; font-size:16.5px; color:var(--ink2); line-height:1.6}
+  .art strong{color:var(--ink); font-weight:700}
+  .toc{background:var(--linen); border:1px solid var(--hair); border-radius:6px; padding:24px 26px; margin:30px 0}
+  .toc p{font-family:var(--serif); font-weight:700; font-size:17px; color:var(--ink); margin-bottom:10px}
+  .toc ol{margin-bottom:0}
+  .toc li{font-size:16px}
+  .note{background:var(--ink); border-radius:6px; padding:24px 26px; margin:28px 0}
+  .note p{color:var(--dark-text) !important; margin-bottom:10px}
+  .note p:last-child{margin-bottom:0}
+  .note strong{color:var(--bronze-l) !important}
+  .art table{width:100%; border-collapse:collapse; margin:24px 0; font-size:15.5px}
+  .art th, .art td{text-align:left; padding:13px 14px; border-bottom:1px solid var(--hair); vertical-align:top; color:var(--ink2)}
+  .art th{background:var(--linen); color:var(--ink); font-family:var(--serif); font-weight:700; font-size:15px}
+  .art details{border-bottom:1px solid var(--hair); padding:18px 2px}
+  .art details summary{cursor:pointer; font-family:var(--serif); font-weight:700; font-size:18px; color:var(--ink); list-style:none; display:flex; justify-content:space-between; gap:14px}
+  .art details summary::after{content:'+'; color:var(--bronze); font-size:22px; line-height:1}
+  .art details[open] summary::after{content:'\2013'}
+  .art details p{margin-top:10px; color:var(--mute); font-size:16px}
+  @media(max-width:640px){
+    .art{padding-top:36px}
+    .art h2{font-size:22px; margin-top:34px}
+    .art p, .art li{font-size:16px}
+    .toc, .note{padding:18px 18px}
+    .art table{font-size:14.5px}
+    .art th, .art td{padding:10px 9px}
+  }
+  /* guide list */
+  .glist{display:grid; gap:16px}
+  .gitem{display:block; border:1px solid var(--hair); border-radius:6px; padding:24px 26px; text-decoration:none; background:var(--paper); transition:border-color .2s, transform .2s}
+  .gitem:hover{border-color:var(--bronze); transform:translateY(-2px)}
+  .gitem .t{display:block; font-family:var(--serif); font-weight:700; font-size:21px; color:var(--ink); margin-bottom:6px; line-height:1.25}
+  .gitem .d{display:block; font-size:15.5px; color:var(--mute)}
 </style>
 </head>
 <body>
