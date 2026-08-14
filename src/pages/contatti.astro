@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+const title = "Contatti — Sartoria Notarile, servizi per studi notarili";
+const description = "Parla con noi: quindici minuti al telefono per capire se i nostri servizi possono essere utili al tuo studio notarile. Telefono +39 388 407 9916, info@sartorianotarile.it.";
+---
+<Base title={title} description={description} canonical="/contatti/">
+  <Nav />
+  <header class="hero">
+    <div class="hero-in" style="padding-bottom:60px">
+      <p class="kicker">Nessuna presentazione commerciale</p>
+      <h1>Quindici minuti,<br><em>tre domande.</em></h1>
+      <p class="hero-sub">Ti chiediamo come lavora oggi il tuo studio, dove si perde più tempo e quali attività vorresti togliere dalla scrivania. Poi ti diciamo con franchezza se possiamo esserti utili — e se la risposta è no, te lo diciamo.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap" style="max-width:900px">
+      <div class="grid2">
+        <div class="card">
+          <h3 style="margin-top:0">Telefono</h3>
+          <p style="font-family:var(--serif); font-size:26px; font-weight:700; color:var(--ink); margin:6px 0 10px"><a href="tel:+393884079916" style="text-decoration:none">+39 388 407 9916</a></p>
+          <p>Dal lunedì al venerdì, 9:00&ndash;18:00. Se non rispondiamo siamo con un altro studio: richiamiamo in giornata.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Email</h3>
+          <p style="font-family:var(--serif); font-size:21px; font-weight:700; color:var(--ink); margin:6px 0 10px"><a href="mailto:info@sartorianotarile.it" style="text-decoration:none">info@sartorianotarile.it</a></p>
+          <p>Scrivi indicando città e dimensione dello studio: rispondiamo entro un giorno lavorativo con una proposta di orario.</p>
+        </div>
+      </div>
+
+      <div class="statement" style="margin-top:26px">
+        <strong>Ci rivolgiamo esclusivamente a studi notarili.</strong> Non trattiamo pratiche per conto di privati o imprese: ogni attività è svolta per conto e su istruzione del Notaio.
+      </div>
+
+      <h2 class="sec-title" style="margin-top:52px">Cosa succede dopo la telefonata</h2>
+      <div class="grid3" style="margin-top:24px">
+        <div class="card"><h3 style="margin-top:0">Se ha senso</h3><p>Fissiamo un incontro di venti minuti, in studio o in videochiamata, per vedere quali attività conviene affidare per prime.</p></div>
+        <div class="card"><h3 style="margin-top:0">Se non ha senso</h3><p>Te lo diciamo subito e non ti richiamiamo. Preferiamo perdere un contatto che far perdere tempo a uno studio.</p></div>
+        <div class="card"><h3 style="margin-top:0">Se è presto</h3><p>Ti lasciamo le guide e ti ricontattiamo solo se ce lo chiedi. Nessuna sequenza automatica di email.</p></div>
+      </div>
+
+      <div class="contact-card" style="margin-top:44px; background:var(--ink)">
+        <a href="tel:+393884079916"><span class="lbl">Telefono</span><span class="val">+39 388 407 9916</span></a>
+        <a href="mailto:info@sartorianotarile.it"><span class="lbl">Email</span><span class="val">info@sartorianotarile.it</span></a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Base>

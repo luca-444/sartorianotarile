@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
+const title = "Quanto costa il servizio — costi certi per attività | Sartoria Notarile";
+const description = "Come funziona il prezzo dei servizi di supporto per studi notarili: pacchetti a prezzo certo, abbonamento o carnet, confronto con il costo di un collaboratore interno e cosa determina il prezzo.";
+const ldFaq = {
+  "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+   {"@type":"Question","name":"Come si paga un servizio di back office per studi notarili?","acceptedAnswer":{"@type":"Answer","text":"Per attività svolta, non per licenza o per utente: pacchetti a prezzo certo per tipologia di attività, acquistabili in abbonamento mensile o in carnet prepagato. Il costo per pratica è quindi noto in anticipo e proporzionato all'utilizzo effettivo."}},
+   {"@type":"Question","name":"Da cosa dipende il prezzo?","acceptedAnswer":{"@type":"Answer","text":"Da tre variabili: quali attività si affidano, con quale volume mensile e con quale livello di personalizzazione sui modelli e sulla prassi dello studio. Per questo il prezzo definitivo si costruisce dopo le prime pratiche reali."}}]
+};
+---
+<Base title={title} description={description} canonical="/costi/">
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldFaq)}></script>
+  <Nav />
+  <article>
+    <div class="read art">
+      <p class="meta">Costi e modello economico</p>
+      <h1>Quanto costa, e come si arriva al prezzo</h1>
+      <p class="lead">Non vendiamo licenze e non contiamo utenti: si paga per attività svolta, con un prezzo certo noto prima di iniziare. Questa pagina spiega come funziona e con che cosa va confrontato.</p>
+
+      <h2>Il principio: costi certi per attività</h2>
+      <p>Ogni attività affidata ha un prezzo fisso, definito in anticipo. La conseguenza è quella che interessa a chi guarda i numeri dello studio: <strong>costo certo per attività significa costo certo per pratica</strong>, e quindi margine visibile su ogni stipula prima ancora di aprirla.</p>
+      <div class="note">
+        <p><strong>Oggi negli studi manca questo dato.</strong> Il ricavo di ogni atto è noto con precisione; il costo di produzione quasi mai, perché le ore dei collaboratori non sono misurate per singola pratica. Due atti identici in onorario possono avere margini molto diversi senza che nessuno se ne accorga.</p>
+      </div>
+
+      <h2>Le due formule di acquisto</h2>
+      <table>
+        <thead><tr><th style="width:30%">Formula</th><th>Come funziona</th><th style="width:26%">Quando conviene</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Carnet prepagato</strong></td><td>Si acquista un pacchetto di attività da consumare quando serve, senza vincoli di continuità</td><td>Volumi variabili, o per iniziare senza impegni</td></tr>
+          <tr><td><strong>Abbonamento mensile</strong></td><td>Plafond fisso di attività ogni mese, al miglior costo unitario, con priorità di lavorazione</td><td>Volumi stabili e ricorrenti, budget da pianificare</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Il confronto che conta</h2>
+      <p>Il termine di paragone corretto non è il prezzo di un software, ma il <strong>costo di far svolgere le stesse attività dentro lo studio</strong>.</p>
+      <table>
+        <thead><tr><th style="width:26%"></th><th>Collaboratore interno</th><th>Servizio esternalizzato</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Struttura di costo</strong></td><td>Fissa: stipendio, contributi, TFR, postazione &mdash; indipendente dai volumi</td><td>Variabile: si paga per attività svolta</td></tr>
+          <tr><td><strong>Avvio</strong></td><td>Selezione e affiancamento: 2&ndash;4 mesi all'autonomia</td><td>Attivo entro una settimana</td></tr>
+          <tr><td><strong>Continuità</strong></td><td>Ferie, malattie, maternità e dimissioni interrompono il flusso</td><td>Team ridondato: continuità 12 mesi l'anno</td></tr>
+          <tr><td><strong>Picchi di lavoro</strong></td><td>Capacità rigida: si assorbono con gli straordinari</td><td>Capacità elastica: si aumenta e si riduce</td></tr>
+          <tr><td><strong>Tecnologia</strong></td><td>Software, licenze e aggiornamenti a carico dello studio</td><td>Inclusa: nessun software da imparare</td></tr>
+        </tbody>
+      </table>
+      <p><a href="/guide/costo-collaboratore-studio-notarile/">Come calcolare il costo reale di un collaboratore e il costo per pratica &rarr;</a></p>
+
+      <h2>Da cosa dipende il prezzo</h2>
+      <ul>
+        <li><strong>Quali attività</strong> si affidano: l'istruttoria documentale e la predisposizione di una bozza hanno complessità diverse;</li>
+        <li><strong>Con quale volume</strong> mensile: più costante è il flusso, più efficiente diventa il costo unitario;</li>
+        <li><strong>Con quale personalizzazione</strong>: lavorare sui modelli e sulla prassi specifica dello studio richiede un allineamento iniziale che poi si ripaga su ogni pratica.</li>
+      </ul>
+      <p>Per questo non pubblichiamo un listino generico, che sarebbe inevitabilmente sbagliato per eccesso o per difetto. Dopo un confronto di quindici minuti indichiamo un ordine di grandezza realistico; dopo le prime pratiche reali, un prezzo certo per ogni attività testata.</p>
+
+      <h2>Il progetto pilota</h2>
+      <p>È il modo in cui costruiamo il prezzo insieme allo studio: si scelgono 2&ndash;3 attività, si testano su pratiche reali per 4&ndash;6 settimane misurando tempi e qualità, e alla fine lo studio riceve una proposta di prezzo certo per ciascuna &mdash; il suo primo listino interno. Quota di adesione contenuta e interamente recuperabile, nessun vincolo alla fine.</p>
+      <p><a href="/#pilota">Come funziona il progetto pilota &rarr;</a></p>
+
+      <h2>Domande frequenti</h2>
+      <details><summary>Ci sono costi di attivazione?</summary><p>L'allineamento iniziale sulla prassi dello studio è compreso nella quota del pilota. A regime non ci sono costi di setup per le attività già attive; una nuova tipologia di attività può richiedere un breve allineamento dedicato.</p></details>
+      <details><summary>Ci sono vincoli di durata?</summary><p>No. Il carnet non ha scadenze di continuità e l'abbonamento è disdettabile secondo il preavviso concordato. I materiali prodotti &mdash; modelli, checklist, fascicoli &mdash; restano allo studio in ogni caso.</p></details>
+      <details><summary>Cosa succede se in un mese il volume cala?</summary><p>Con il carnet non si consuma nulla e il credito resta disponibile. Con l'abbonamento il plafond non utilizzato si riporta al mese successivo secondo quanto concordato: l'obiettivo è che lo studio non paghi capacità ferma.</p></details>
+    </div>
+  </article>
+  <Cta titolo="Vuoi un ordine di grandezza per il tuo studio?" testo="Quindici minuti al telefono: capiamo quali attività avrebbero senso per il tuo studio e con quali volumi, e ti diamo un numero realistico. Nessun impegno." />
+  <Footer />
+</Base>
