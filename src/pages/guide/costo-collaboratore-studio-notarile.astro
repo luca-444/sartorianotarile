@@ -1,0 +1,125 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Cta from '../../components/Cta.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Quanto costa davvero un collaboratore di studio notarile: la formula completa";
+const description = "Come calcolare il costo aziendale reale di un collaboratore di studio notarile: dal lordo al costo pieno, le voci che si dimenticano, il costo orario effettivo e il confronto con l'esternalizzazione delle attività amministrative.";
+
+const ldArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Quanto costa davvero un collaboratore di studio notarile: la formula completa",
+  "description": description,
+  "author": { "@type": "Organization", "name": "Servizi Studi Notarili — Giamor Group S.r.l." },
+  "publisher": { "@type": "Organization", "name": "Giamor Group S.r.l." },
+  "inLanguage": "it-IT"
+};
+const ldFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Come si calcola il costo aziendale di un dipendente?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si parte dalla retribuzione annua lorda e si aggiungono contributi previdenziali e assicurativi a carico del datore, accantonamento TFR, mensilità aggiuntive se non già comprese, e i costi indiretti: postazione di lavoro, dotazione informatica, licenze software, formazione. Il costo pieno risulta di norma superiore del 40-50% rispetto al lordo." } },
+    { "@type": "Question", "name": "Come si calcola il costo orario effettivo di un collaboratore?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Si divide il costo aziendale annuo per le ore effettivamente lavorate, non per quelle contrattuali: dalle circa 2.080 ore teoriche vanno sottratte ferie, festività, permessi e assenze, ottenendo circa 1.600-1.700 ore. Il costo orario reale risulta quindi sensibilmente più alto di quello calcolato sul monte ore nominale." } },
+    { "@type": "Question", "name": "Conviene assumere o esternalizzare le attività amministrative di uno studio notarile?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dipende dalla stabilità dei volumi. Con volumi alti e costanti un collaboratore interno può risultare più conveniente sul costo unitario; con volumi variabili o stagionali l'esternalizzazione evita di pagare capacità inutilizzata nei periodi di calo e di rifiutare lavoro nei picchi. Molti studi adottano un modello misto: struttura interna dimensionata sul carico minimo e servizio esterno per la parte variabile." } }
+  ]
+};
+---
+<Base title={title} description={description} canonical="/guide/costo-collaboratore-studio-notarile/">
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldArticle)}></script>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldFaq)}></script>
+  <Nav />
+
+  <article>
+    <div class="read art">
+      <p class="meta">Guida operativa &middot; economia dello studio</p>
+      <h1>Quanto costa davvero un collaboratore di studio notarile</h1>
+      <p class="lead" style="font-size:19px">La domanda sembra semplice e quasi nessuno studio ha la risposta esatta. Non perché sia difficile: perché il costo di una persona non sta nella busta paga. Questa guida contiene la formula completa, le voci che si dimenticano e il modo corretto di calcolare il costo di una singola attività.</p>
+
+      <div class="toc">
+        <p>In questa guida</p>
+        <ol>
+          <li>Dal lordo al costo aziendale: la formula</li>
+          <li>Le voci che si dimenticano sempre</li>
+          <li>Il costo orario effettivo (non quello nominale)</li>
+          <li>Quanto costa una singola pratica</li>
+          <li>Assumere o esternalizzare: come si decide</li>
+        </ol>
+      </div>
+
+      <h2>1. Dal lordo al costo aziendale: la formula</h2>
+      <p>Il primo errore è ragionare sul lordo annuo. Il costo che lo studio sostiene realmente si ottiene sommando:</p>
+      <table>
+        <thead><tr><th style="width:52%">Voce</th><th>Incidenza indicativa</th></tr></thead>
+        <tbody>
+          <tr><td>Retribuzione annua lorda (comprensiva di mensilità aggiuntive)</td><td>Base di calcolo</td></tr>
+          <tr><td>Contributi previdenziali e assicurativi a carico del datore</td><td>circa +30%</td></tr>
+          <tr><td>Accantonamento TFR</td><td>circa +7%</td></tr>
+          <tr><td>Costi indiretti: postazione, dotazione informatica, licenze, formazione</td><td>+5&ndash;10%</td></tr>
+        </tbody>
+      </table>
+      <p>Il risultato: <strong>il costo pieno supera di norma il lordo del 40-50%</strong>. Le percentuali variano in base a contratto applicato, inquadramento e agevolazioni eventualmente in essere, quindi il calcolo definitivo va fatto con il consulente del lavoro. Ma l'ordine di grandezza è questo, e già cambia la prospettiva.</p>
+
+      <h2>2. Le voci che si dimenticano sempre</h2>
+      <p>Oltre al costo contrattuale, tre poste raramente entrano nel calcolo e sono spesso le più pesanti:</p>
+      <ul>
+        <li><strong>Il tempo di inserimento.</strong> Nei primi mesi la produttività è parziale e assorbe tempo di chi affianca: un costo doppio, sostenuto una volta per ogni nuova risorsa.</li>
+        <li><strong>La capacità inutilizzata.</strong> Un collaboratore va pagato anche nei periodi di calo. Se il carico di lavoro oscilla del 30% tra mesi di punta e mesi lenti, si paga tutto l'anno una capacità che serve solo per una parte.</li>
+        <li><strong>Il tempo del notaio.</strong> È la voce più costosa dell'intero studio, e viene consumata ogni volta che un'attività amministrativa risale la catena perché nessuno riesce a farla.</li>
+      </ul>
+      <div class="note">
+        <p><strong>Il criterio corretto.</strong> Non "quanto mi costa questa persona", ma <strong>quanto mi costa svolgere questa attività</strong>. È l'unico confronto che permette di scegliere razionalmente tra interno ed esterno.</p>
+      </div>
+
+      <h2>3. Il costo orario effettivo (non quello nominale)</h2>
+      <p>Un dipendente a tempo pieno ha circa 2.080 ore contrattuali annue. Ma le ore effettivamente disponibili sono molte meno: sottratte ferie, festività, permessi e assenze medie, restano in genere <strong>fra 1.600 e 1.700 ore</strong>.</p>
+      <p>Il calcolo corretto è dunque:</p>
+      <div class="note">
+        <p><strong>Costo orario effettivo = costo aziendale annuo ÷ ore effettivamente lavorate</strong></p>
+        <p>Usare le 2.080 ore teoriche sottostima il costo orario di circa il 20-25%. È l'errore che porta molti studi a credere che un'attività interna costi meno di quanto costa davvero.</p>
+      </div>
+      <p>Al costo orario così ottenuto va poi aggiunto, per le attività che lo richiedono, il tempo di supervisione di chi controlla il lavoro.</p>
+
+      <h2>4. Quanto costa una singola pratica</h2>
+      <p>Con il costo orario effettivo si può finalmente rispondere alla domanda che conta: <em>quanto mi costa produrre una pratica?</em> Serve un solo dato aggiuntivo, che nessun software fornisce ma che si può stimare in mezz'ora con i collaboratori: <strong>quanti minuti assorbe ciascuna fase</strong>.</p>
+      <p>Su una compravendita standard, gli studi con cui lavoriamo indicano in genere:</p>
+      <table>
+        <thead><tr><th style="width:60%">Fase</th><th>Tempo indicativo</th></tr></thead>
+        <tbody>
+          <tr><td>Inquadramento della richiesta e preventivo</td><td>20&ndash;30 minuti</td></tr>
+          <tr><td>Raccolta documenti, contatti e solleciti</td><td>40&ndash;90 minuti, distribuiti su giorni</td></tr>
+          <tr><td>Inserimento e verifica dei dati</td><td>30&ndash;40 minuti</td></tr>
+          <tr><td>Predisposizione della bozza</td><td>30&ndash;40 minuti</td></tr>
+          <tr><td>Riordino documentale e archiviazione</td><td>15&ndash;20 minuti</td></tr>
+        </tbody>
+      </table>
+      <p>Moltiplicando i minuti per il costo orario effettivo si ottiene il <strong>costo interno di produzione della pratica</strong>. È il numero che quasi nessuno studio conosce, e che permette due cose: sapere quali incarichi sono realmente remunerativi e valutare qualsiasi alternativa esterna con un termine di confronto oggettivo.</p>
+
+      <h2>5. Assumere o esternalizzare: come si decide</h2>
+      <p>Non esiste una risposta valida per tutti. La variabile decisiva è la <strong>stabilità dei volumi</strong>:</p>
+      <table>
+        <thead><tr><th style="width:34%">Situazione dello studio</th><th>Scelta più efficiente</th></tr></thead>
+        <tbody>
+          <tr><td>Volumi alti e costanti tutto l'anno</td><td>Struttura interna: il costo unitario scende con l'utilizzo pieno</td></tr>
+          <tr><td>Volumi variabili o stagionali</td><td>Esternalizzazione della parte variabile: si paga solo ciò che serve</td></tr>
+          <tr><td>Crescita in corso, esito incerto</td><td>Esternalizzazione: aumenta la capacità senza impegni pluriennali</td></tr>
+          <tr><td>Difficoltà a trovare personale qualificato</td><td>Esternalizzazione: la competenza è già formata e disponibile</td></tr>
+          <tr><td>Attività che richiedono presenza fisica in sede</td><td>Struttura interna: non delegabile a distanza</td></tr>
+        </tbody>
+      </table>
+      <p>Il modello che vediamo più spesso funzionare è <strong>misto</strong>: struttura interna dimensionata sul carico minimo dell'anno, servizio esterno per la parte variabile e per le attività ripetitive che non richiedono conoscenza tacita dello studio. Così non si paga capacità ferma nei mesi lenti e non si rifiuta lavoro nei picchi.</p>
+
+      <h2>Domande frequenti</h2>
+      <details><summary>Di quanto supera il costo aziendale la retribuzione lorda?</summary><p>Di norma del 40-50%, sommando contributi a carico del datore, accantonamento TFR e costi indiretti come postazione, dotazione informatica e formazione. Le percentuali esatte dipendono da contratto, inquadramento ed eventuali agevolazioni.</p></details>
+      <details><summary>Perché non si usano le ore contrattuali per il costo orario?</summary><p>Perché non sono le ore realmente disponibili. Sottratte ferie, festività, permessi e assenze, delle circa 2.080 ore teoriche restano in genere 1.600-1.700 ore: usare il monte ore nominale sottostima il costo orario del 20-25%.</p></details>
+      <details><summary>Come si stima il tempo assorbito da ciascuna fase?</summary><p>Il metodo più rapido e attendibile è chiedere ai collaboratori una stima per le due o tre tipologie di atto più frequenti, e verificarla su cinque o sei pratiche reali cronometrando le fasi. Mezza giornata di lavoro che restituisce il dato più importante dell'economia dello studio.</p></details>
+    </div>
+  </article>
+
+  <Cta titolo="Vuoi conoscere il costo per pratica del tuo studio?" testo="Nei primi confronti aiutiamo lo studio a stimarlo: è il numero che serve per decidere razionalmente cosa tenere dentro e cosa affidare fuori. Quindici minuti al telefono, senza impegno." />
+  <Footer />
+</Base>

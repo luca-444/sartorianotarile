@@ -1,0 +1,130 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Cta from '../../components/Cta.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Raccolta documenti per la compravendita: checklist operativa per studi notarili";
+const description = "Checklist operativa dei documenti per una compravendita immobiliare: cosa serve per le parti, per l'immobile, per i casi particolari, chi contattare per ottenere ciascun documento e gli errori che fanno slittare la stipula.";
+
+const ldArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Raccolta documenti per la compravendita: checklist operativa per studi notarili",
+  "description": description,
+  "author": { "@type": "Organization", "name": "Servizi Studi Notarili — Giamor Group S.r.l." },
+  "publisher": { "@type": "Organization", "name": "Giamor Group S.r.l." },
+  "inLanguage": "it-IT"
+};
+const ldFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Chi contattare per ottenere i documenti di una compravendita?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Gli interlocutori tipici sono cinque: il cliente per i documenti personali e l'atto di provenienza, l'amministratore di condominio per la dichiarazione sulle spese e i verbali, il tecnico per la conformità urbanistica e catastale e l'APE, l'agenzia immobiliare per proposta e preliminare, la banca per la documentazione del mutuo e per l'eventuale cancellazione di ipoteca." } },
+    { "@type": "Question", "name": "Quali sono i documenti che più spesso fanno slittare una stipula?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nell'esperienza degli studi i ritardi più frequenti derivano da: dichiarazione dell'amministratore di condominio, documentazione urbanistica e conformità catastale, atto di provenienza nei casi di successione, documenti di identità scaduti e assenso alla cancellazione dell'ipoteca da parte della banca." } },
+    { "@type": "Question", "name": "Come si organizza la raccolta documentale per ridurre i tempi?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Con tre accorgimenti: inviare al cliente un elenco unico e completo al primo contatto anziché richieste successive, aprire in parallelo i canali verso amministratore, tecnico e banca senza attendere il cliente, e fissare la data di stipula solo quando il fascicolo è completo, non prima." } }
+  ]
+};
+---
+<Base title={title} description={description} canonical="/guide/raccolta-documenti-compravendita/">
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldArticle)}></script>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldFaq)}></script>
+  <Nav />
+
+  <article>
+    <div class="read art">
+      <p class="meta">Guida operativa &middot; checklist documentale</p>
+      <h1>Raccolta documenti per la compravendita: la checklist operativa</h1>
+      <p class="lead" style="font-size:19px">La raccolta documentale è la fase che assorbe più tempo di coordinamento in una compravendita, e quella in cui nascono quasi tutti i rinvii di stipula. Questa checklist elenca cosa serve, <strong>chi contattare per ottenerlo</strong> e dove si generano i ritardi.</p>
+
+      <div class="note">
+        <p><strong>Come usarla.</strong> L'elenco è una base operativa da adattare alla prassi dello studio e al caso concreto: la valutazione di quali documenti siano necessari per il singolo atto resta del notaio. Le voci variano in funzione della natura delle parti, del regime patrimoniale, della tipologia di immobile e della provenienza.</p>
+      </div>
+
+      <div class="toc">
+        <p>In questa guida</p>
+        <ol>
+          <li>Documenti delle parti</li>
+          <li>Documenti dell'immobile</li>
+          <li>Casi che richiedono documentazione aggiuntiva</li>
+          <li>Chi contattare per ciascun documento</li>
+          <li>I cinque ritardi più frequenti e come prevenirli</li>
+        </ol>
+      </div>
+
+      <h2>1. Documenti delle parti</h2>
+      <ul>
+        <li>Documento di identità in corso di validità e codice fiscale di ciascuna parte;</li>
+        <li>Estratto per riassunto dell'atto di matrimonio o certificato di stato libero, per la verifica del regime patrimoniale;</li>
+        <li>Eventuali convenzioni matrimoniali o accordi di separazione dei beni;</li>
+        <li>Per parti non italiane: documenti tradotti e legalizzati ove necessario, codice fiscale italiano, eventuale permesso di soggiorno;</li>
+        <li>Per parti che agiscono tramite rappresentante: procura in originale o copia autentica, con verifica dei poteri;</li>
+        <li>Per società: visura aggiornata, statuto vigente, delibere o poteri di firma del soggetto che interviene;</li>
+        <li>Dati e documentazione utili all'adeguata verifica in materia di antiriciclaggio.</li>
+      </ul>
+
+      <h2>2. Documenti dell'immobile</h2>
+      <ul>
+        <li><strong>Atto di provenienza</strong> (compravendita precedente, donazione, dichiarazione di successione con relative trascrizioni);</li>
+        <li><strong>Visure catastali</strong> aggiornate e planimetria catastale;</li>
+        <li><strong>Verifica di conformità</strong> catastale e urbanistica, con l'attestazione del tecnico;</li>
+        <li><strong>Titoli edilizi</strong>: licenza, concessione o permesso di costruire, varianti, eventuali pratiche di sanatoria e relativi pagamenti;</li>
+        <li><strong>Certificato di destinazione urbanistica</strong> per i terreni;</li>
+        <li><strong>APE</strong> &mdash; attestato di prestazione energetica in corso di validità;</li>
+        <li><strong>Ispezioni ipotecarie</strong> e documentazione relativa a eventuali formalità pregiudizievoli;</li>
+        <li>Per immobili in condominio: <strong>dichiarazione dell'amministratore</strong> sulle spese e sull'assenza di morosità, regolamento di condominio, eventuali delibere su lavori straordinari;</li>
+        <li>Documentazione relativa a impianti, ove prevista dalla prassi dello studio o richiesta dalle parti.</li>
+      </ul>
+
+      <h2>3. Casi che richiedono documentazione aggiuntiva</h2>
+      <table>
+        <thead><tr><th style="width:34%">Situazione</th><th>Documentazione aggiuntiva tipica</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Acquisto con mutuo</strong></td><td>Bozza del contratto di mutuo, documentazione della banca, coordinamento sulla data e sull'ordine degli atti</td></tr>
+          <tr><td><strong>Immobile con ipoteca da cancellare</strong></td><td>Conteggio di estinzione, assenso alla cancellazione, documentazione della banca creditrice</td></tr>
+          <tr><td><strong>Provenienza per successione</strong></td><td>Dichiarazione di successione, certificati, accettazione tacita o espressa, trascrizioni</td></tr>
+          <tr><td><strong>Provenienza per donazione</strong></td><td>Atto di donazione e verifiche connesse alla natura del titolo</td></tr>
+          <tr><td><strong>Agevolazioni fiscali richieste</strong></td><td>Documentazione a supporto dei requisiti dichiarati dalle parti</td></tr>
+          <tr><td><strong>Immobile locato</strong></td><td>Contratto di locazione, registrazione, eventuali comunicazioni</td></tr>
+          <tr><td><strong>Parti minori o soggetti tutelati</strong></td><td>Autorizzazioni dell'autorità competente</td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. Chi contattare per ciascun documento</h2>
+      <p>Questa è la tabella che fa la differenza operativa: il tempo non si perde nel sapere <em>cosa</em> serve, ma nell'inseguire <em>chi</em> lo deve fornire.</p>
+      <table>
+        <thead><tr><th style="width:28%">Interlocutore</th><th>Cosa fornisce</th><th style="width:22%">Tempi tipici</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Cliente</strong></td><td>Documenti personali, atto di provenienza, titoli edilizi in suo possesso, APE se già disponibile</td><td>Da giorni a settimane, con solleciti</td></tr>
+          <tr><td><strong>Amministratore di condominio</strong></td><td>Dichiarazione su spese e morosità, regolamento, delibere lavori</td><td>1&ndash;3 settimane</td></tr>
+          <tr><td><strong>Tecnico o geometra</strong></td><td>Conformità catastale e urbanistica, planimetrie, APE</td><td>1&ndash;2 settimane</td></tr>
+          <tr><td><strong>Agenzia immobiliare</strong></td><td>Proposta accettata, preliminare, documentazione raccolta in fase di trattativa</td><td>Giorni</td></tr>
+          <tr><td><strong>Banca</strong></td><td>Bozza di mutuo, conteggio di estinzione, assenso a cancellazione</td><td>1&ndash;3 settimane</td></tr>
+        </tbody>
+      </table>
+
+      <h2>5. I cinque ritardi più frequenti e come prevenirli</h2>
+      <ol>
+        <li><strong>La dichiarazione dell'amministratore.</strong> È il collo di bottiglia più comune: va richiesta il primo giorno, non quando il resto è pronto.</li>
+        <li><strong>La conformità urbanistica e catastale.</strong> Se emergono difformità i tempi si allungano molto: attivare il tecnico subito, in parallelo alla raccolta dal cliente.</li>
+        <li><strong>La provenienza per successione.</strong> Richiede ricostruzioni documentali che possono richiedere settimane: identificarla al primo colloquio è decisivo per fissare una data realistica.</li>
+        <li><strong>Documenti di identità scaduti.</strong> Banale e frequentissimo: va verificata la validità all'apertura della pratica, non alla vigilia.</li>
+        <li><strong>L'assenso alla cancellazione dell'ipoteca.</strong> Dipende dai tempi della banca, che non sono negoziabili: va avviato appena si conosce la formalità.</li>
+      </ol>
+      <div class="note">
+        <p><strong>La regola che riduce i rinvii.</strong> Aprire tutti i canali in parallelo il primo giorno &mdash; cliente, amministratore, tecnico, banca &mdash; anziché in sequenza, e fissare la data di stipula solo quando il fascicolo è completo. Chi fissa la data prima trasforma ogni ritardo esterno in un problema dello studio.</p>
+      </div>
+
+      <h2>Domande frequenti</h2>
+      <details><summary>Quanto tempo assorbe in media la raccolta documentale?</summary><p>Gli studi con cui lavoriamo indicano fra i 40 e i 90 minuti di tempo-persona per una compravendita standard, distribuiti su più giorni in telefonate, email e solleciti. Il tempo cresce quando gli interlocutori sono più di tre o quando emergono difformità.</p></details>
+      <details><summary>Conviene inviare al cliente un elenco unico o richieste progressive?</summary><p>Un elenco unico e completo al primo contatto, accompagnato dalla spiegazione del perché ciascun documento serve. Le richieste progressive raddoppiano i contatti necessari e danno al cliente la sensazione di un processo disorganizzato.</p></details>
+      <details><summary>Questa checklist può essere adattata allo studio?</summary><p>Sì, ed è consigliabile: ogni studio ha una prassi consolidata su documenti aggiuntivi e formulazioni. Costruire una checklist propria per le due o tre tipologie di atto più frequenti è uno degli interventi organizzativi con il miglior rapporto tra sforzo e risultato.</p></details>
+    </div>
+  </article>
+
+  <Cta titolo="Vuoi che la raccolta documenti la facciamo noi?" testo="Apriamo i canali verso clienti, amministratori, tecnici, agenzie e banche a nome dello studio, sollecitiamo e verifichiamo: lo studio riceve una sola notifica, «fascicolo completo». Quindici minuti al telefono per capire se ha senso." />
+  <Footer />
+</Base>

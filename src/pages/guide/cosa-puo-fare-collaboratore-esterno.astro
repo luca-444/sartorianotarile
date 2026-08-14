@@ -1,0 +1,133 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Cta from '../../components/Cta.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Cosa può fare un collaboratore esterno di uno studio notarile e cosa resta al notaio";
+const description = "I quattro livelli di attività di uno studio notarile e dove passa il confine della funzione riservata: quali attività amministrative e preparatorie sono esternalizzabili, quali richiedono verifica caso per caso e quali restano esclusivamente al notaio.";
+
+const ldArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cosa può fare un collaboratore esterno di uno studio notarile e cosa resta al notaio",
+  "description": description,
+  "author": { "@type": "Organization", "name": "Servizi Studi Notarili — Giamor Group S.r.l." },
+  "publisher": { "@type": "Organization", "name": "Giamor Group S.r.l." },
+  "inLanguage": "it-IT"
+};
+const ldFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Quali attività di uno studio notarile possono essere esternalizzate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sono esternalizzabili le attività amministrative, organizzative e preparatorie: gestione delle richieste in ingresso, predisposizione di preventivi secondo criteri dello studio, raccolta e verifica formale dei documenti, contatti e solleciti agli interlocutori, inserimento dati, organizzazione del fascicolo digitale e predisposizione di bozze da sottoporre al notaio." } },
+    { "@type": "Question", "name": "Quali attività restano riservate al notaio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Restano riservate la valutazione giuridica della pratica, il controllo di legalità, l'identificazione e la verifica delle parti dove richiesta personalmente, il ricevimento dell'atto, le autenticazioni, la valutazione del rischio in materia di antiriciclaggio e in generale ogni attività e dichiarazione che la legge attribuisce alla funzione notarile, con la relativa responsabilità professionale." } },
+    { "@type": "Question", "name": "Come si gestisce la riservatezza con un fornitore esterno?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Il fornitore va nominato responsabile del trattamento ai sensi dell'art. 28 del Regolamento UE 2016/679, con atto scritto che definisca finalità, categorie di dati, misure di sicurezza, durata della conservazione e sub-responsabili. A questo si aggiungono accordi di riservatezza, segregazione dei dati per singolo studio, tracciamento degli accessi e cifratura." } }
+  ]
+};
+---
+<Base title={title} description={description} canonical="/guide/cosa-puo-fare-collaboratore-esterno/">
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldArticle)}></script>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldFaq)}></script>
+  <Nav />
+
+  <article>
+    <div class="read art">
+      <p class="meta">Guida operativa &middot; perimetro e responsabilità</p>
+      <h1>Cosa può fare un collaboratore esterno e cosa resta al notaio</h1>
+      <p class="lead" style="font-size:19px">È la prima domanda che si pone qualsiasi notaio davanti all'idea di esternalizzare, e giustamente: la funzione notarile ha un perimetro definito dalla legge. Questa guida distingue quattro livelli di attività e indica dove passa il confine.</p>
+
+      <div class="note">
+        <p><strong>Avvertenza.</strong> Questa guida ha finalità informative e organizzative e non costituisce parere legale o deontologico. Le valutazioni sul perimetro delle attività delegabili vanno verificate caso per caso, anche alla luce delle indicazioni del Consiglio Notarile competente e delle regole delle singole piattaforme telematiche.</p>
+      </div>
+
+      <div class="toc">
+        <p>In questa guida</p>
+        <ol>
+          <li>Livello 1 &mdash; Attività amministrative e di segreteria</li>
+          <li>Livello 2 &mdash; Attività preparatorie e documentali</li>
+          <li>Livello 3 &mdash; Attività da verificare caso per caso</li>
+          <li>Livello 4 &mdash; Funzione notarile: non delegabile</li>
+          <li>Riservatezza, GDPR e responsabilità</li>
+        </ol>
+      </div>
+
+      <h2>1. Livello 1 &mdash; Attività amministrative e di segreteria</h2>
+      <p>Sono le attività organizzative che non comportano alcuna valutazione giuridica. Sono pienamente esternalizzabili e rappresentano, nella maggior parte degli studi, la quota più consistente di tempo assorbito:</p>
+      <ul>
+        <li>gestione delle richieste in ingresso e prima risposta secondo modelli concordati;</li>
+        <li>apertura della pratica e tracciamento dello stato di avanzamento;</li>
+        <li>contatti con clienti, agenzie immobiliari, amministratori di condominio, tecnici, banche e altri interlocutori;</li>
+        <li>solleciti periodici e follow-up delle scadenze;</li>
+        <li>coordinamento degli appuntamenti e convocazioni;</li>
+        <li>inserimento e aggiornamento delle anagrafiche;</li>
+        <li>rinomina, ordinamento e archiviazione digitale dei documenti.</li>
+      </ul>
+
+      <h2>2. Livello 2 &mdash; Attività preparatorie e documentali</h2>
+      <p>Qui il lavoro tocca il contenuto della pratica, ma resta <strong>preparatorio</strong>: produce materiale che il notaio esamina, corregge e fa proprio. La distinzione decisiva è tra <em>predisporre una proposta</em> e <em>assumere una decisione</em>.</p>
+      <ul>
+        <li>predisposizione del preventivo secondo i criteri stabiliti dallo studio;</li>
+        <li>compilazione delle checklist documentali per tipologia di atto;</li>
+        <li>verifica <strong>formale</strong> dei documenti: presenza, leggibilità, scadenze, completezza;</li>
+        <li>segnalazione di anomalie e incongruenze all'attenzione del notaio;</li>
+        <li>estrazione dei dati dai documenti e controllo incrociato fra fonti;</li>
+        <li>organizzazione del fascicolo digitale secondo lo standard dello studio;</li>
+        <li>predisposizione di bozze e ricerche a supporto, da sottoporre al notaio.</li>
+      </ul>
+      <div class="note">
+        <p><strong>Il criterio.</strong> Un servizio esterno può rilevare che un documento manca, è scaduto o è incoerente con un altro. Non può stabilire se quella circostanza sia giuridicamente rilevante per l'atto: quella è valutazione, e la valutazione è del notaio.</p>
+      </div>
+
+      <h2>3. Livello 3 &mdash; Attività da verificare caso per caso</h2>
+      <p>Alcune attività non sono classificabili in astratto: dipendono dalla piattaforma utilizzata, dal tipo di accesso e dalle regole che disciplinano l'autorizzazione dei soggetti abilitati. Vanno verificate singolarmente prima di essere organizzate:</p>
+      <ul>
+        <li>accessi a banche dati e piattaforme telematiche;</li>
+        <li>esecuzione di visure presso registri e conservatorie;</li>
+        <li>predisposizione degli adempimenti telematici e loro trasmissione;</li>
+        <li>attività di registrazione e trascrizione;</li>
+        <li>adempimenti post-stipula.</li>
+      </ul>
+      <p>L'impostazione prudente, e quella che adottiamo, è la seguente: <strong>la preparazione del materiale può essere esterna, l'invio e la trasmissione restano allo studio</strong>, sotto il controllo e con le credenziali di chi ne ha titolo. Il risultato pratico è quasi identico in termini di tempo risparmiato, senza aree grigie.</p>
+
+      <h2>4. Livello 4 &mdash; Funzione notarile: non delegabile</h2>
+      <p>Resta integralmente al notaio, con la sua responsabilità professionale, tutto ciò che costituisce esercizio della funzione:</p>
+      <ul>
+        <li>valutazione giuridica della pratica e scelta delle soluzioni;</li>
+        <li>controllo di legalità;</li>
+        <li>identificazione e verifica delle parti dove richiesta personalmente;</li>
+        <li>ricevimento dell'atto, letture e formalità di rito;</li>
+        <li>autenticazioni;</li>
+        <li>valutazione del rischio in materia di antiriciclaggio (la <em>preparazione</em> del fascicolo è attività di livello 2, la <em>valutazione</em> è di livello 4);</li>
+        <li>ogni attività e dichiarazione che la legge riserva al notaio.</li>
+      </ul>
+      <p>Un servizio esterno serio non si limita a rispettare questo confine: lo dichiara. Se un fornitore promette di "occuparsi dell'atto" o di "gestire la pratica dall'inizio alla fine compresa la stipula", quella promessa è un segnale d'allarme.</p>
+
+      <h2>5. Riservatezza, GDPR e responsabilità</h2>
+      <p>L'esternalizzazione comporta il trattamento di dati personali &mdash; spesso patrimoniali e talvolta particolari &mdash; da parte di un soggetto terzo. Gli elementi minimi da pretendere:</p>
+      <table>
+        <thead><tr><th style="width:40%">Elemento</th><th>Perché serve</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nomina a responsabile del trattamento</strong> (art. 28 GDPR)</td><td>Atto scritto che definisce finalità, categorie di dati, misure di sicurezza, durata, sub-responsabili e obblighi di assistenza</td></tr>
+          <tr><td><strong>Accordo di riservatezza</strong></td><td>Vincola il fornitore e il personale impiegato, anche dopo la fine del rapporto</td></tr>
+          <tr><td><strong>Segregazione dei dati per studio</strong></td><td>Nessuna commistione fra clienti diversi del fornitore</td></tr>
+          <tr><td><strong>Cifratura e tracciamento degli accessi</strong></td><td>Dati protetti in transito e a riposo, con registro di chi ha visto cosa</td></tr>
+          <tr><td><strong>Ubicazione dei dati</strong></td><td>Conservazione in ambito UE, con garanzie del Capo V del GDPR per eventuali trasferimenti</td></tr>
+          <tr><td><strong>Reversibilità</strong></td><td>Restituzione o cancellazione dei dati e riconsegna dei materiali alla fine del rapporto</td></tr>
+        </tbody>
+      </table>
+      <p>Da notare un punto che spesso sfugge: il notaio resta <strong>titolare del trattamento</strong> e risponde della scelta del fornitore. Verificare le misure di sicurezza non è un eccesso di zelo, è parte del dovere di diligenza.</p>
+
+      <h2>Domande frequenti</h2>
+      <details><summary>Un servizio esterno può parlare direttamente con i clienti dello studio?</summary><p>Sì, per le attività organizzative e di raccolta documentale, operando a nome dello studio con istruzioni e modelli concordati. È buona prassi definire per iscritto cosa può essere detto e cosa va rimandato al notaio, e tracciare i contatti effettuati.</p></details>
+      <details><summary>Chi risponde se un documento raccolto è errato?</summary><p>Il fornitore risponde della corretta esecuzione dell'attività affidata &mdash; ad esempio di aver richiesto e verificato formalmente ciò che era in elenco. La valutazione della rilevanza giuridica del documento e il controllo di legalità restano al notaio, così come la responsabilità professionale sull'atto.</p></details>
+      <details><summary>Serve informare il cliente che alcune attività sono svolte da un fornitore esterno?</summary><p>L'informativa privacy dello studio deve indicare le categorie di destinatari dei dati, tra cui i fornitori di servizi che agiscono come responsabili del trattamento. Molti studi lo esplicitano anche nel primo contatto: è un elemento di trasparenza che i clienti apprezzano.</p></details>
+    </div>
+  </article>
+
+  <Cta titolo="Vuoi vedere come definiamo il perimetro?" testo="Portiamo agli incontri la nomina a responsabile del trattamento e la descrizione delle misure di sicurezza già pronte: sono il primo documento che condividiamo, non l'ultimo. Quindici minuti al telefono per parlarne." />
+  <Footer />
+</Base>

@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Cta from '../../components/Cta.astro';
+import Footer from '../../components/Footer.astro';
+const title = "Guide operative per studi notarili — organizzazione, costi, documenti | Sartoria Notarile";
+const description = "Guide pratiche per studi notarili: come gestire l'uscita di un collaboratore, quanto costa davvero il personale di studio, cosa può fare un servizio esterno, checklist documenti per la compravendita.";
+---
+<Base title={title} description={description} canonical="/guide/">
+  <Nav />
+  <header class="hero">
+    <div class="hero-in" style="padding-bottom:60px">
+      <p class="kicker">Risorse gratuite per studi notarili</p>
+      <h1>Guide operative</h1>
+      <p class="hero-sub">Risposte pratiche alle domande organizzative ed economiche che si pongono gli studi. Nessuna registrazione, nessun modulo da compilare.</p>
+    </div>
+  </header>
+  <section>
+    <div class="wrap" style="max-width:860px">
+      <div class="glist">
+        <a class="gitem" href="/guide/segretaria-si-dimette/"><span class="t">Come gestire lo studio quando la segretaria si dimette</span><span class="d">Cosa fare nelle prime 48 ore, come mappare ciò che sapeva solo lei, quali attività coprire subito e come evitare che accada di nuovo.</span></a>
+        <a class="gitem" href="/guide/costo-collaboratore-studio-notarile/"><span class="t">Quanto costa davvero un collaboratore di studio notarile</span><span class="d">Dal lordo al costo aziendale: la formula completa, le voci nascoste e come calcolare il costo orario effettivo e il costo per pratica.</span></a>
+        <a class="gitem" href="/guide/cosa-puo-fare-collaboratore-esterno/"><span class="t">Cosa può fare un collaboratore esterno e cosa resta al Notaio</span><span class="d">I quattro livelli di attività di uno studio notarile e dove passa il confine della funzione riservata, con i requisiti GDPR da pretendere.</span></a>
+        <a class="gitem" href="/guide/raccolta-documenti-compravendita/"><span class="t">Raccolta documenti per la compravendita: la checklist completa</span><span class="d">L'elenco per parti e immobile, chi contattare per ogni documento con i tempi tipici, e i cinque ritardi che fanno slittare le stipule.</span></a>
+      </div>
+    </div>
+  </section>
+  <Cta />
+  <Footer />
+</Base>

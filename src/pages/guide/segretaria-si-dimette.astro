@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Cta from '../../components/Cta.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "La segretaria si dimette: come gestire uno studio notarile senza fermarsi";
+const description = "Guida operativa per studi notarili: cosa fare nelle prime 48 ore dopo le dimissioni di un collaboratore, come mappare le conoscenze non documentate, quali attività coprire subito e come ridurre la dipendenza da una singola persona.";
+
+const ldArticle = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "La segretaria si dimette: come gestire uno studio notarile senza fermarsi",
+  "description": description,
+  "author": { "@type": "Organization", "name": "Servizi Studi Notarili — Giamor Group S.r.l." },
+  "publisher": { "@type": "Organization", "name": "Giamor Group S.r.l." },
+  "inLanguage": "it-IT",
+  "about": ["organizzazione studio notarile", "personale di studio", "outsourcing segreteria"]
+};
+const ldFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Quanto tempo serve per sostituire un collaboratore di studio notarile?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tra ricerca, selezione e affiancamento servono in media dai due ai quattro mesi perché una nuova risorsa diventi autonoma sulle pratiche. Il periodo di preavviso, di norma inferiore, copre quindi solo una parte del vuoto operativo." } },
+    { "@type": "Question", "name": "Quali attività coprire per prime quando un collaboratore lascia lo studio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Per prime vanno coperte le attività che generano scadenze verso l'esterno: risposta alle richieste in ingresso, preventivi, raccolta dei documenti e solleciti. Sono le attività che, se si fermano, bloccano le stipule successive e fanno perdere incarichi." } },
+    { "@type": "Question", "name": "Come si riduce la dipendenza dello studio da una singola persona?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Documentando le procedure (checklist per tipologia di atto, modelli di comunicazione, criteri di preventivo), adottando una convenzione unica di archiviazione digitale e affidando all'esterno le attività ripetitive che non richiedono conoscenza tacita dello studio." } }
+  ]
+};
+---
+<Base title={title} description={description} canonical="/guide/segretaria-si-dimette/">
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldArticle)}></script>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldFaq)}></script>
+  <Nav />
+
+  <article>
+    <div class="read art">
+      <p class="meta">Guida operativa &middot; organizzazione dello studio</p>
+      <h1>La segretaria si dimette: come gestire lo studio senza fermarsi</h1>
+      <p class="lead" style="font-size:19px">Quando un collaboratore storico lascia uno studio notarile, il problema non è solo trovare un sostituto: è che con lui esce una parte della memoria operativa dello studio. Questa guida spiega cosa fare nelle prime 48 ore, come coprire il vuoto e come evitare che la situazione si ripeta.</p>
+
+      <div class="toc">
+        <p>In questa guida</p>
+        <ol>
+          <li>Perché il preavviso non basta</li>
+          <li>Le prime 48 ore: la mappa di ciò che sapeva solo lei</li>
+          <li>Le attività da coprire per prime</li>
+          <li>Le tre strade possibili, con tempi e costi</li>
+          <li>Come rendere lo studio meno fragile</li>
+        </ol>
+      </div>
+
+      <h2>1. Perché il preavviso non basta</h2>
+      <p>Il calcolo che quasi tutti gli studi sbagliano è questo: si considera coperto il periodo di preavviso e si cerca il sostituto in quella finestra. Ma il vuoto operativo reale non si chiude con l'assunzione: si chiude quando la nuova persona è <strong>autonoma</strong>.</p>
+      <p>Tra pubblicazione dell'annuncio, selezione, inserimento e affiancamento, perché un collaboratore diventi autonomo sulle pratiche di uno studio notarile servono in genere <strong>dai due ai quattro mesi</strong>. In quel periodo lo studio funziona a capacità ridotta e, cosa più costosa, il notaio riassorbe personalmente le attività amministrative che aveva delegato.</p>
+      <div class="note">
+        <p><strong>Il costo invisibile.</strong> Ogni ora in cui il notaio si occupa di raccogliere documenti o rincorrere un'agenzia è un'ora sottratta ad attività che solo lui può svolgere. È il costo più alto di tutta l'operazione e non compare in nessun conto economico.</p>
+      </div>
+
+      <h2>2. Le prime 48 ore: la mappa di ciò che sapeva solo lei</h2>
+      <p>La priorità non è pubblicare l'annuncio: è <strong>estrarre la conoscenza non documentata</strong> finché la persona è ancora in studio. Nei giorni immediatamente successivi alle dimissioni conviene chiedere di scrivere, anche in forma grezza:</p>
+      <ul>
+        <li><strong>Elenco delle pratiche aperte</strong> con stato di avanzamento e cosa si sta attendendo, da chi;</li>
+        <li><strong>Contatti operativi abituali</strong>: referenti di agenzie, amministratori di condominio, tecnici, filiali bancarie, con nome e numero diretto;</li>
+        <li><strong>Checklist implicite</strong>: quali documenti chiede di norma per ciascuna tipologia di atto;</li>
+        <li><strong>Criteri di preventivo</strong>: come vengono quantificate le pratiche ricorrenti;</li>
+        <li><strong>Convenzioni di archiviazione</strong>: dove si trovano le cose e con quale logica sono nominate;</li>
+        <li><strong>Scadenze in corso</strong> nei successivi novanta giorni.</li>
+      </ul>
+      <p>Questo materiale ha un valore che eccede la singola sostituzione: è la base delle procedure che allo studio probabilmente mancano.</p>
+
+      <h2>3. Le attività da coprire per prime</h2>
+      <p>Non tutte le attività hanno la stessa urgenza. La regola è coprire per prime quelle che <strong>generano conseguenze verso l'esterno</strong>, perché sono quelle che fanno perdere incarichi e fanno slittare le stipule:</p>
+      <table>
+        <thead><tr><th style="width:34%">Attività</th><th>Se si ferma</th><th style="width:18%">Priorità</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Risposta alle richieste in ingresso</strong></td><td>Il potenziale cliente si rivolge a un altro studio: l'incarico è perso senza che nessuno lo sappia</td><td>Immediata</td></tr>
+          <tr><td><strong>Preventivi</strong></td><td>Stessa conseguenza, aggravata: il cliente ha chiesto e non ha ricevuto risposta</td><td>Immediata</td></tr>
+          <tr><td><strong>Raccolta documenti e solleciti</strong></td><td>Le pratiche in corso si bloccano e le date di stipula slittano</td><td>Immediata</td></tr>
+          <tr><td><strong>Scadenzario e adempimenti</strong></td><td>Rischio di termini non rispettati</td><td>Alta</td></tr>
+          <tr><td><strong>Archiviazione e fascicoli</strong></td><td>Disordine che si accumula e si paga più tardi</td><td>Media</td></tr>
+        </tbody>
+      </table>
+
+      <h2>4. Le tre strade possibili, con tempi e costi</h2>
+      <p>Davanti a un'uscita, uno studio notarile ha tre opzioni. Non sono alternative rigide: molti studi le combinano.</p>
+      <table>
+        <thead><tr><th style="width:26%">Strada</th><th>Tempi</th><th>Struttura di costo</th><th>Limiti</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Assumere subito</strong></td><td>2&ndash;4 mesi all'autonomia</td><td>Costo fisso annuo, indipendente dai volumi</td><td>Il vuoto resta aperto durante la ricerca; rischio di ripetere la situazione</td></tr>
+          <tr><td><strong>Redistribuire all'interno</strong></td><td>Immediati</td><td>Nessun costo aggiuntivo apparente</td><td>Sovraccarico degli altri collaboratori e del notaio; rischio di dimissioni a catena</td></tr>
+          <tr><td><strong>Esternalizzare le attività amministrative</strong></td><td>Circa una settimana</td><td>Variabile, per attività svolta</td><td>Richiede di definire procedure e istruzioni; non copre le attività riservate al notaio</td></tr>
+        </tbody>
+      </table>
+      <p>La combinazione più efficace, nella nostra esperienza con gli studi, è <strong>esternalizzare subito il lavoro amministrativo e di coordinamento</strong> per fermare l'emorragia, e cercare con calma la persona giusta invece della prima disponibile. Il vuoto si chiude in giorni anziché in mesi, e la selezione non viene fatta sotto pressione.</p>
+
+      <h2>5. Come rendere lo studio meno fragile</h2>
+      <p>Un'uscita è dolorosa in proporzione a quanta conoscenza era conservata in una sola testa. Tre interventi riducono strutturalmente la fragilità:</p>
+      <ul>
+        <li><strong>Procedure scritte minime</strong>: una checklist documentale per ciascuna tipologia di atto ricorrente e tre o quattro modelli di comunicazione al cliente. Un pomeriggio di lavoro che vale mesi di affiancamento.</li>
+        <li><strong>Una convenzione unica di archiviazione</strong>: nomi dei file e struttura delle cartelle uguali per tutti, così qualunque pratica è trovabile da chiunque.</li>
+        <li><strong>Separare le attività che richiedono conoscenza dello studio da quelle che non la richiedono</strong>: le seconde &mdash; solleciti, verifiche di completezza, inserimento dati, riordino documentale &mdash; possono essere affidate all'esterno in modo permanente, riducendo il numero di persone indispensabili.</li>
+      </ul>
+
+      <div class="note">
+        <p><strong>Da ricordare.</strong> La dipendenza da una singola persona non è un problema di persone: è un problema di procedure mancanti. Chi documenta le procedure trasforma un evento traumatico in un fastidio gestibile.</p>
+      </div>
+
+      <h2>Domande frequenti</h2>
+      <details><summary>Quanto tempo serve per sostituire un collaboratore di studio notarile?</summary><p>Tra ricerca, selezione e affiancamento servono in media dai due ai quattro mesi perché una nuova risorsa diventi autonoma sulle pratiche. Il periodo di preavviso copre quindi solo una parte del vuoto operativo.</p></details>
+      <details><summary>Quali attività conviene coprire per prime?</summary><p>Quelle che generano scadenze verso l'esterno: risposta alle richieste in ingresso, preventivi, raccolta documenti e solleciti. Se si fermano, bloccano le stipule e fanno perdere incarichi.</p></details>
+      <details><summary>Un servizio esterno può sostituire del tutto un collaboratore?</summary><p>No, e non è l'obiettivo. Può assorbire le attività amministrative, documentali e di coordinamento; restano allo studio le attività che richiedono presenza fisica, rapporto diretto in sede e tutte quelle riservate al notaio.</p></details>
+    </div>
+  </article>
+
+  <Cta titolo="Un'uscita improvvisa da coprire?" testo="Possiamo attivare il supporto sulle attività amministrative entro una settimana, mentre lo studio cerca con calma la persona giusta. Quindici minuti al telefono per capire se ha senso nel tuo caso." />
+  <Footer />
+</Base>
