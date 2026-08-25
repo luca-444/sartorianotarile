@@ -4,10 +4,11 @@ import Nav from '../components/Nav.astro';
 import Cta from '../components/Cta.astro';
 import Footer from '../components/Footer.astro';
 const title = "Quanto costa il servizio — costi certi per attività | Sartoria Notarile";
-const description = "Come funziona il prezzo dei servizi di supporto per studi notarili: pacchetti a prezzo certo, abbonamento o carnet, confronto con il costo di un collaboratore interno e cosa determina il prezzo.";
+const description = "Come funziona il prezzo dei servizi di supporto per studi notarili: pacchetti a prezzo certo, abbonamento o carnet, e l'analisi del costo interno reale di una compravendita immobiliare, dalla pre-stipula agli adempimenti post-stipula.";
 const ldFaq = {
   "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
    {"@type":"Question","name":"Come si paga un servizio di back office per studi notarili?","acceptedAnswer":{"@type":"Answer","text":"Per attività svolta, non per licenza o per utente: pacchetti a prezzo certo per tipologia di attività, acquistabili in abbonamento mensile o in carnet prepagato. Il costo per pratica è quindi noto in anticipo e proporzionato all'utilizzo effettivo."}},
+   {"@type":"Question","name":"Quanto costa allo studio gestire internamente una compravendita?","acceptedAnswer":{"@type":"Answer","text":"Scomponendo il processo di una compravendita immobiliare con mutuo, le attività amministrative e preparatorie di pre-stipula e post-stipula assorbono tipicamente tra 21 e 39 ore-persona di collaboratori di studio. Valorizzate al costo aziendale effettivo di un collaboratore, si tratta di diverse centinaia di euro di costo di produzione per singolo atto, oltre al tempo del notaio."}},
    {"@type":"Question","name":"Da cosa dipende il prezzo?","acceptedAnswer":{"@type":"Answer","text":"Da tre variabili: quali attività si affidano, con quale volume mensile e con quale livello di personalizzazione sui modelli e sulla prassi dello studio. Per questo il prezzo definitivo si costruisce dopo le prime pratiche reali."}}]
 };
 ---
@@ -18,7 +19,7 @@ const ldFaq = {
     <div class="read art">
       <p class="meta">Costi e modello economico</p>
       <h1>Quanto costa, e come si arriva al prezzo</h1>
-      <p class="lead">Non vendiamo licenze e non contiamo utenti: si paga per attività svolta, con un prezzo certo noto prima di iniziare. L'obiettivo del servizio è portare il costo delle attività delegate tra il 30% e il 40% sotto quello della gestione interna — e restituire allo studio le ore corrispondenti.</p>
+      <p class="lead">Non vendiamo licenze e non contiamo utenti: si paga per attività svolta, con un prezzo certo noto prima di iniziare. L'obiettivo del servizio è portare il costo delle attività delegate tra il 30% e il 40% sotto quello della gestione interna — e restituire allo studio le ore corrispondenti, che su un atto complesso non sono poche.</p>
 
       <h2>Il principio: costi certi per attività</h2>
       <p>Ogni attività affidata ha un prezzo fisso, definito in anticipo. La conseguenza è quella che interessa a chi guarda i numeri dello studio: <strong>costo certo per attività significa costo certo per pratica</strong>, e quindi margine visibile su ogni stipula prima ancora di aprirla.</p>
@@ -49,35 +50,80 @@ const ldFaq = {
       </table>
       <p><a href="/guide/costo-collaboratore-studio-notarile/">Come calcolare il costo reale di un collaboratore e il costo per pratica &rarr;</a></p>
 
-      <h2>Quanto si risparmia: l'obiettivo del servizio</h2>
-      <p>L'obiettivo con cui progettiamo il servizio &egrave; preciso: <strong>portare il costo delle attivit&agrave; delegate tra il 30% e il 40% sotto il costo di svolgerle internamente</strong>. Non &egrave; una promessa generica: deriva dal modo in cui produciamo il lavoro &mdash; procedure standardizzate, AI documentale sulle fasi ripetitive, giuristi che intervengono dove serve competenza &mdash; e dal fatto che quel costo viene ripartito su pi&ugrave; studi anzich&eacute; gravare su uno solo.</p>
-      <div class="note">
-        <p><strong>Come leggere questo numero.</strong> La riduzione del 30-40% &egrave; il target di progetto del servizio, misurato nei nostri test di processo interni. Il valore effettivo per il singolo studio dipende da volumi, prassi e tipologie di atto: &egrave; esattamente ci&ograve; che il progetto pilota misura, sulle pratiche reali dello studio, prima di qualsiasi impegno.</p>
-      </div>
+      <h2>Quanto lavoro c'è davvero dietro un atto</h2>
+      <p>Prima di parlare di risparmio serve un numero onesto sul punto di partenza. Prendiamo l'atto più rappresentativo del carico di uno studio: una <strong>compravendita immobiliare abitativa con mutuo</strong>, parti persone fisiche, senza patologie particolari sul titolo. Non l'atto complicato: quello ordinario.</p>
+      <p>Scomponendo l'intero ciclo &mdash; dal primo contatto alla chiusura del fascicolo &mdash; il lavoro di studio si distribuisce così.</p>
 
-      <h3>Un esempio numerico, con le ipotesi dichiarate</h3>
-      <p>Prendiamo uno studio che tratta 200 pratiche l'anno e ipotizziamo, per la sola parte amministrativa e preparatoria (inquadramento, preventivo, raccolta documenti, solleciti, inserimento dati, riordino), un assorbimento di circa 2,5 ore per pratica a un costo orario effettivo di 28 euro:</p>
+      <h3>Fase pre-stipula</h3>
       <table>
-        <thead><tr><th style="width:46%">Voce</th><th>Gestione interna</th><th>Con Sartoria Notarile</th></tr></thead>
+        <thead><tr><th>Attività</th><th style="width:16%">Ore-persona</th><th style="width:18%">Delegabile</th></tr></thead>
         <tbody>
-          <tr><td>Ore-persona per pratica (parte delegabile)</td><td>~2,5 h</td><td>0 h per lo studio</td></tr>
-          <tr><td>Costo per pratica</td><td>~70 &euro;</td><td>~42&ndash;49 &euro; <strong>(&minus;30/&minus;40%)</strong></td></tr>
-          <tr><td>Costo annuo su 200 pratiche</td><td>~14.000 &euro;</td><td>~8.400&ndash;9.800 &euro;</td></tr>
-          <tr><td>Risparmio diretto annuo</td><td>&mdash;</td><td><strong>4.200&ndash;5.600 &euro;</strong></td></tr>
-          <tr><td>Ore-persona restituite allo studio</td><td>&mdash;</td><td><strong>~500 ore</strong> (circa un terzo di una risorsa a tempo pieno)</td></tr>
+          <tr><td>Primo contatto, inquadramento della pratica, preventivo e conferma incarico</td><td>1,0&ndash;1,5</td><td>Sì</td></tr>
+          <tr><td>Raccolta documenti da parti, agenzia e banca; solleciti e recall fino al fascicolo completo</td><td>2,5&ndash;4,0</td><td>Sì</td></tr>
+          <tr><td>Visure ipotecarie e catastali, controllo di conformità catastale (planimetrie, intestazioni, dati)</td><td>2,0&ndash;3,0</td><td>Sì</td></tr>
+          <tr><td>Esame della provenienza e della catena ventennale, atti precedenti, servitù, vincoli, formalità pregiudizievoli</td><td>2,0&ndash;3,5</td><td>In parte</td></tr>
+          <tr><td>Verifiche urbanistiche ed edilizie: titoli abilitativi, condoni, agibilità, APE</td><td>1,0&ndash;2,0</td><td>Sì</td></tr>
+          <tr><td>Antiriciclaggio: adeguata verifica, titolare effettivo, controlli PEP, profilatura e archiviazione</td><td>1,0&ndash;1,5</td><td>Sì</td></tr>
+          <tr><td>Condominio: regolamento, attestazione spese, rapporti con l'amministratore</td><td>0,5&ndash;1,0</td><td>Sì</td></tr>
+          <tr><td>Coordinamento con la banca: delibera, capitolato, bozza di mutuo, tempi di erogazione</td><td>1,5&ndash;2,5</td><td>Sì</td></tr>
+          <tr><td>Predisposizione della bozza d'atto, circolazione alle parti, revisioni e allineamenti</td><td>2,0&ndash;4,0</td><td>In parte</td></tr>
+          <tr><td>Calcolo delle imposte, preventivo definitivo, gestione somme e deposito prezzo</td><td>1,0&ndash;1,5</td><td>Sì</td></tr>
+          <tr><td>Organizzazione della stipula: convocazioni, agenda, controllo finale del fascicolo</td><td>0,5&ndash;1,0</td><td>Sì</td></tr>
+          <tr><td><strong>Totale pre-stipula</strong></td><td><strong>15,0&ndash;25,5</strong></td><td>&mdash;</td></tr>
         </tbody>
       </table>
-      <p>I numeri dell'esempio sono ipotesi dichiarate, non dati del vostro studio: servono a mostrare il meccanismo. Le ore per pratica e il costo orario effettivo del vostro studio si calcolano in mezza giornata, e la <a href="/guide/costo-collaboratore-studio-notarile/">guida sul costo del collaboratore</a> spiega esattamente come.</p>
 
-      <h3>L'effetto sul margine</h3>
-      <p>Il risparmio diretto &egrave; solo la met&agrave; del beneficio, e la meno interessante. Le due componenti:</p>
-      <ul>
-        <li><strong>Margine per pratica.</strong> Su una pratica il cui costo interno di produzione &egrave; oggi 70 euro, il risparmio di 21&ndash;28 euro si traduce interamente in margine aggiuntivo: a parit&agrave; di onorario, il margine di quella pratica cresce esattamente di quell'importo.</li>
-        <li><strong>Capacit&agrave; liberata.</strong> Le ~500 ore restituite ogni anno equivalgono a circa un terzo di una risorsa a tempo pieno. Se impiegate per gestire pratiche aggiuntive, consentono di aumentare i volumi <strong>senza aumentare la struttura</strong>: qui il costo fisso resta invariato e il margine incrementale delle nuove pratiche &egrave; quasi interamente profitto.</li>
-      </ul>
+      <h3>Fase post-stipula</h3>
+      <p>È la parte che nessuno conta, perché arriva quando l'atto è già stato firmato e fatturato. Sul margine pesa esattamente come l'altra.</p>
+      <table>
+        <thead><tr><th>Attività</th><th style="width:16%">Ore-persona</th><th style="width:18%">Delegabile</th></tr></thead>
+        <tbody>
+          <tr><td>Repertorio e Adempimento Unico: registrazione telematica, controllo esiti e ricevute</td><td>1,5&ndash;2,5</td><td>Sì</td></tr>
+          <tr><td>Trascrizione e iscrizione dell'ipoteca, verifica degli esiti, gestione degli scarti</td><td>1,0&ndash;2,0</td><td>Sì</td></tr>
+          <tr><td>Voltura catastale e allineamento delle intestazioni</td><td>0,5&ndash;1,0</td><td>Sì</td></tr>
+          <tr><td>Comunicazioni obbligatorie: Comune, condominio, cessione di fabbricato, utenze</td><td>0,5&ndash;1,0</td><td>Sì</td></tr>
+          <tr><td>Copie autentiche ed esecutive per le parti e per la banca; svincolo somme e disposizioni di pagamento</td><td>1,0&ndash;2,0</td><td>Sì</td></tr>
+          <tr><td>Fascicolazione, archiviazione e conservazione a norma</td><td>0,5&ndash;1,5</td><td>Sì</td></tr>
+          <tr><td>Fatturazione, riconciliazione degli incassi, eventuali solleciti di saldo</td><td>0,5&ndash;1,5</td><td>Sì</td></tr>
+          <tr><td>Gestione anomalie: rettifiche, scarti telematici, integrazioni documentali</td><td>0,5&ndash;2,0</td><td>Sì</td></tr>
+          <tr><td><strong>Totale post-stipula</strong></td><td><strong>6,0&ndash;13,5</strong></td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+
       <div class="note">
-        <p><strong>In sintesi.</strong> &minus;30/&minus;40% sul costo delle attivit&agrave; delegate, zero ore assorbite allo studio, e la capacit&agrave; liberata disponibile per crescere senza assumere. Il pilota serve proprio a verificare questi numeri sulle pratiche reali dello studio, prima di qualsiasi impegno.</p>
+        <p><strong>Il numero complessivo: 21&ndash;39 ore-persona per una compravendita ordinaria</strong>, con una mediana intorno alle 28&ndash;30 ore. Di queste, circa <strong>20&ndash;22 ore</strong> sono attività amministrative, documentali e di adempimento che non richiedono né la firma del notaio né il giudizio di un giurista senior: sono la parte delegabile. Le restanti 7&ndash;9 ore &mdash; qualificazione giuridica, scelte redazionali, ricevimento dell'atto, responsabilità &mdash; restano dove devono restare.</p>
       </div>
+      <p>Le fasce derivano dalla scomposizione del processo su casi standard e dai nostri test interni di lavorazione. Non sostituiscono la misurazione sul singolo studio: un'organizzazione molto rodata sta sotto la fascia minima su alcune voci, una pratica con provenienza da successione o parte societaria la supera ampiamente.</p>
+
+      <h2>Quanto vale quel tempo</h2>
+      <p>Il costo orario da usare non è la retribuzione lorda divisa per le ore di contratto: è il <strong>costo aziendale pieno diviso per le ore effettivamente lavorate</strong>, che al netto di ferie, festività, permessi, malattia e formazione sono circa 1.500 all'anno per una risorsa a tempo pieno.</p>
+      <table>
+        <thead><tr><th style="width:34%">Profilo</th><th>Costo aziendale annuo</th><th>Costo orario effettivo</th><th>Con postazione, software e supervisione</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Impiegato amministrativo</strong> (segreteria, adempimenti, telematica)</td><td>36.000&ndash;42.000 &euro;</td><td>24&ndash;28 &euro;/h</td><td>29&ndash;34 &euro;/h</td></tr>
+          <tr><td><strong>Collaboratore senior</strong> (istruttoria, bozze, coordinamento)</td><td>55.000&ndash;70.000 &euro;</td><td>37&ndash;47 &euro;/h</td><td>43&ndash;54 &euro;/h</td></tr>
+        </tbody>
+      </table>
+      <p>Sulla parte delegabile di una compravendita il mix tipico è di circa due terzi di lavoro amministrativo e un terzo di lavoro senior: il costo orario medio ponderato si colloca <strong>intorno ai 34&ndash;38 euro l'ora</strong>.</p>
+
+      <h3>Il costo di produzione della parte delegabile</h3>
+      <table>
+        <thead><tr><th style="width:46%">Compravendita abitativa con mutuo</th><th>Gestione interna</th><th>Con Sartoria Notarile</th></tr></thead>
+        <tbody>
+          <tr><td>Ore-persona sulla parte delegabile</td><td>~20&ndash;22 h</td><td>0 h per lo studio</td></tr>
+          <tr><td>Costo orario medio ponderato</td><td>34&ndash;38 &euro;/h</td><td>&mdash;</td></tr>
+          <tr><td><strong>Costo per atto</strong></td><td><strong>~680&ndash;840 &euro;</strong></td><td><strong>~410&ndash;590 &euro;</strong> (&minus;30/&minus;40%)</td></tr>
+          <tr><td>Beneficio per atto</td><td>&mdash;</td><td><strong>230&ndash;310 &euro; e ~21 ore</strong></td></tr>
+        </tbody>
+      </table>
+      <p>Su un portafoglio di <strong>100 compravendite l'anno</strong> &mdash; una quota realistica dell'attività di uno studio strutturato &mdash; questo significa circa <strong>2.100 ore-persona</strong> e <strong>23.000&ndash;31.000 euro</strong> di costo di produzione che escono dalla struttura interna. Le 2.100 ore corrispondono a circa 1,4 risorse a tempo pieno.</p>
+
+      <div class="note">
+        <p><strong>Come diventa risparmio vero.</strong> Se il personale resta lo stesso e i volumi non crescono, il beneficio esiste sulla carta ma non in banca: le ore liberate vanno convertite. Le due strade sono <strong>non sostituire o non assumere</strong> quando la struttura cambia, oppure <strong>usare la capacità liberata per gestire più atti a struttura invariata</strong> &mdash; caso in cui il costo fisso resta fermo e il margine delle pratiche aggiuntive è quasi interamente profitto. Il dato è affidabile solo se lo studio decide quale delle due strade percorrere: è la prima cosa che mettiamo per iscritto.</p>
+      </div>
+
+      <h2>Perché possiamo costare meno</h2>
+      <p>Il &minus;30/&minus;40% non è uno sconto: deriva dal modo in cui il lavoro viene prodotto. Procedure standardizzate al posto della prassi ricostruita ogni volta, AI documentale sulle fasi ripetitive di lettura ed estrazione dati, giuristi che intervengono solo dove serve competenza, e un costo di struttura ripartito su più studi anziché a carico di uno solo. È il target di progetto con cui dimensioniamo il servizio, misurato sui nostri test di processo: il valore effettivo per il singolo studio dipende da volumi, prassi e tipologie di atto, ed è esattamente ciò che il progetto pilota misura sulle pratiche reali prima di qualsiasi impegno.</p>
 
       <h2>Da cosa dipende il prezzo</h2>
       <ul>
@@ -92,6 +138,7 @@ const ldFaq = {
       <p><a href="/pilota/">Come funziona il progetto pilota &rarr;</a></p>
 
       <h2>Domande frequenti</h2>
+      <details><summary>Le ore indicate non sono sovrastimate?</summary><p>Sono ore-persona sull'intero ciclo, non il tempo di una singola persona in una singola giornata: comprendono pre-stipula, adempimenti post-stipula, solleciti, riprese della pratica e gestione delle anomalie, che nella percezione quotidiana si perdono perché frammentati su settimane e su più persone. La verifica è semplice: si tracciano i tempi su cinque compravendite reali e si confronta.</p></details>
       <details><summary>Ci sono costi di attivazione?</summary><p>L'allineamento iniziale sulla prassi dello studio è compreso nella quota del pilota. A regime non ci sono costi di setup per le attività già attive; una nuova tipologia di attività può richiedere un breve allineamento dedicato.</p></details>
       <details><summary>Ci sono vincoli di durata?</summary><p>No. Il carnet non ha scadenze di continuità e l'abbonamento è disdettabile secondo il preavviso concordato. I materiali prodotti &mdash; modelli, checklist, fascicoli &mdash; restano allo studio in ogni caso.</p></details>
       <details><summary>Cosa succede se in un mese il volume cala?</summary><p>Con il carnet non si consuma nulla e il credito resta disponibile. Con l'abbonamento il plafond non utilizzato si riporta al mese successivo secondo quanto concordato: l'obiettivo è che lo studio non paghi capacità ferma.</p></details>
