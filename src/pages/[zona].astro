@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import Nav from '../components/Nav.astro';
-import Sections from '../components/Sections.astro';
 import Footer from '../components/Footer.astro';
 import zone from '../data/zone.json';
 
@@ -11,8 +10,8 @@ export function getStaticPaths() {
 
 const { z } = Astro.props;
 const primi = z.comuni.slice(0, 4).join(', ');
-const title = `Servizi per studi notarili in provincia di ${z.nome} — back office, segreteria esternalizzata e IT in ${z.regione} | Sartoria Notarile`;
-const description = `Supporto operativo per studi notarili nella ${z.provincia} e in ${z.regione}: presa in carico delle richieste, preventivi, raccolta documentale, solleciti, fascicoli istruiti e bozze. E assistenza IT, cloud e cybersecurity. Attivi a ${primi} e in tutta la provincia.`;
+const title = `Servizi per studi notarili in ${z.provincia} — back office e segreteria esternalizzata | Sartoria Notarile`;
+const description = `Supporto operativo per studi notarili nella ${z.provincia}: preventivo rapido, pre-stipula e post-stipula. Lavoriamo sulle pratiche più frequenti del territorio, da ${primi} a tutta la provincia. Senza software da installare.`;
 
 const ld = {
   "@context": "https://schema.org",
@@ -22,12 +21,26 @@ const ld = {
   "description": description,
   "parentOrganization": { "@type": "Organization", "name": "Giamor Group S.r.l." },
   "areaServed": [z.nome, z.provincia, z.regione, ...z.comuni],
+  "knowsAbout": z.atti,
+  "audience": { "@type": "Audience", "audienceType": "Studi notarili" },
   "email": "info@sartorianotarile.it",
   "telephone": "+393884079916"
+};
+
+const ldFaq = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": `Lavorate con studi notarili in ${z.provincia}?`,
+      "acceptedAnswer": { "@type": "Answer", "text": `Sì. Operiamo da remoto su canale sicuro per gli studi notarili di tutta la ${z.provincia} e del ${z.distretto}, senza vincoli di distanza e senza software da installare per lo studio.` } },
+    { "@type": "Question", "name": `Su quali pratiche siete più utili agli studi di ${z.nome}?`,
+      "acceptedAnswer": { "@type": "Answer", "text": z.partenza } }
+  ]
 };
 ---
 <Base title={title} description={description} canonical={`/${z.slug}/`}>
   <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ld)}></script>
+  <script type="application/ld+json" is:inline slot="head" set:html={JSON.stringify(ldFaq)}></script>
 
   <Nav />
 
@@ -35,55 +48,97 @@ const ld = {
     <div class="hero-in" style="padding-bottom:34px">
       <p class="kicker">Studi notarili &middot; {z.provincia} &middot; {z.regione}</p>
       <h1>Studi notarili di {z.nome}:<br>voi ricevete i clienti, <em>a tutto il resto pensiamo noi.</em></h1>
-      <p class="hero-sub">Richieste inquadrate, preventivi pronti, documenti raccolti: clienti, agenzie, amministratori, tecnici e banche li sentiamo noi. Lo studio riceve una sola notifica: &laquo;completo&raquo;. Pi&ugrave; la gestione completa di IT, cloud e cybersecurity, tutto da remoto.</p>
+      <p class="hero-sub">Preventivo rapido, pre-stipula e post-stipula sulle pratiche pi&ugrave; frequenti del territorio &mdash; {z.atti[0].toLowerCase()}, {z.atti[1].toLowerCase()} &mdash; a pacchetto, da remoto, con tempi e costi certi.</p>
     </div>
     <div class="hero-cta-row">
       <a class="btn btn-bronze" href="#comuni">Fai l'upgrade del tuo studio</a>
-      <a class="btn btn-paper" href="#backoffice">Scopri cosa delegare</a>
-    </div>
-    <div class="doors">
-      <article class="door reveal">
-        <p class="tag">Il territorio</p>
-        <h2>Un partner per gli studi di {z.nome}</h2>
-        <p>{z.intro}</p>
-        <p style="margin-top:12px; font-size:13.5px; color:var(--bronze-l)">Riferimento territoriale: {z.distretto}</p>
-      </article>
-      <article class="door reveal">
-        <p class="tag">Come lavoriamo</p>
-        <h2>Dentro il vostro processo, fuori dallo studio</h2>
-        <p>Ci inseriamo nel flusso di lavoro senza cambiarlo: prendiamo in carico le richieste, dialoghiamo con clienti e interlocutori a nome dello studio, raccogliamo e verifichiamo i documenti su canale sicuro. Nessun software da installare, NDA su ogni pratica e nomina GDPR come responsabile del trattamento.</p>
-      </article>
+      <a class="btn btn-paper" href="/pacchetti/">Cosa contiene ogni pacchetto</a>
     </div>
   </header>
 
-  <!-- ============ COMUNI SERVITI ============ -->
+  <section aria-labelledby="terr-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Il territorio</p>
+        <h2 class="sec-title" id="terr-title">Cosa vediamo negli studi di {z.nome}</h2>
+      </div>
+
+      <div class="feature" style="align-items:start">
+        <div class="reveal">
+          <p style="font-size:17px; color:var(--ink2); margin-bottom:16px; line-height:1.7">{z.tessuto}</p>
+          <p style="font-size:17px; color:var(--ink2); line-height:1.7">{z.focus}</p>
+        </div>
+        <div class="card reveal">
+          <p style="font-family:var(--serif); font-size:19px; font-weight:700; color:var(--ink); margin-bottom:14px">Le pratiche pi&ugrave; frequenti</p>
+          <ul style="list-style:none; margin:0">
+            {z.atti.map((a) => (
+              <li style="display:flex; gap:10px; align-items:flex-start; margin-bottom:11px; font-size:15.5px; color:var(--ink2)">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9A7B4F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none; margin-top:3px"><path d="m5 12 5 5L19 7"/></svg>
+                <span>{a}</span>
+              </li>
+            ))}
+          </ul>
+          <p style="margin-top:18px; padding-top:14px; border-top:1px solid var(--hair); font-size:13.5px; color:var(--mute)">Riferimento territoriale<br><strong style="color:var(--ink)">{z.distretto}</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="comuni" style="background:var(--linen)" aria-labelledby="comuni-title">
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="kicker">Dove operiamo nella {z.provincia}</p>
         <h2 class="sec-title" id="comuni-title">Hai uno studio notarile in uno di questi comuni?</h2>
-        <p>Serviamo gli studi notarili di tutta la {z.provincia}, da remoto e senza vincoli di distanza. Se il tuo studio ha sede in uno di questi comuni, il servizio &egrave; attivabile entro una settimana.</p>
+        <p>Gli studi del territorio hanno dimensioni molto diverse, dal capoluogo ai comuni minori: lavoriamo con tutti da remoto, senza vincoli di distanza. Se il tuo studio ha sede in uno di questi {z.comuni.length} comuni della {z.provincia}, il servizio &egrave; attivabile entro una settimana.</p>
       </div>
       <ul class="comuni-grid reveal">
         {z.comuni.map((c) => (<li>{c}</li>))}
       </ul>
       <div class="upgrade reveal">
         <p class="up-title">Fai l'upgrade del tuo studio.</p>
-        <p class="up-text">Ore restituite ogni settimana, meno errori, costi certi per attivit&agrave;: 20 minuti di confronto bastano per capire da quali attivit&agrave; conviene partire. Nessuna vendita, nessun impegno.</p>
+        <p class="up-text">Su pratiche come {z.atti[0].toLowerCase()} lavoriamo ogni settimana: venti minuti di confronto bastano per capire quante ore pu&ograve; recuperare il tuo studio e da quale pacchetto conviene partire. Nessuna vendita, nessun impegno.</p>
         <div class="hero-cta" style="margin-bottom:0; justify-content:flex-start">
           <a class="btn btn-bronze" href={`mailto:info@sartorianotarile.it?subject=Upgrade%20studio%20notarile%20%E2%80%94%20${z.nome}`}>Richiedi un incontro</a>
-          <a class="btn btn-ghost" href="/pilota/">Come funziona il pilota</a>
+          <a class="btn btn-ghost" href="/pilota/">Il progetto pilota</a>
         </div>
       </div>
     </div>
   </section>
 
-  <Sections />
+  <section aria-labelledby="part-title">
+    <div class="wrap" style="max-width:900px">
+      <div class="sec-head reveal">
+        <p class="kicker">L'esperienza sul campo</p>
+        <h2 class="sec-title" id="part-title">Da dove partono gli studi di {z.nome}</h2>
+        <p>{z.partenza}</p>
+      </div>
+      <div class="grid3">
+        <a class="gitem reveal" href="/pacchetti/"><span class="t">Preventivo rapido</span><span class="d">Richiesta inquadrata e bozza di preventivo pronta per l'approvazione del Notaio.</span></a>
+        <a class="gitem reveal" href="/pacchetti/"><span class="t">Pre-stipula</span><span class="d">Documenti raccolti e verificati, visure lette, fascicolo ordinato, bozza predisposta.</span></a>
+        <a class="gitem reveal" href="/pacchetti/"><span class="t">Post-stipula</span><span class="d">Registrazione, trascrizione, voltura, comunicazioni, copie e archiviazione.</span></a>
+      </div>
+      <p style="text-align:center; margin-top:26px; font-size:15.5px; color:var(--mute)">Nessun software da installare, nessuna integrazione: lo scambio avviene via mail o cartella sicura. <a href="/costi/">Come funziona il prezzo &rarr;</a></p>
+    </div>
+  </section>
 
-  <!-- ============ CTA PROVINCIA ============ -->
+  <section style="background:var(--linen)" aria-labelledby="faq-loc">
+    <div class="wrap" style="max-width:820px">
+      <div class="sec-head reveal" style="margin-bottom:26px">
+        <p class="kicker">Domande frequenti</p>
+        <h2 class="sec-title" id="faq-loc">Studi notarili di {z.nome}: le domande che ci fanno</h2>
+      </div>
+      <div class="art">
+        <details class="reveal"><summary>Lavorate con studi notarili in {z.provincia}?</summary><p>S&igrave;. Operiamo da remoto su canale sicuro per gli studi di tutta la {z.provincia} e del {z.distretto}, senza vincoli di distanza e senza software da installare. Lo scambio dei documenti avviene via mail o su cartella condivisa Microsoft&nbsp;365, con NDA su ogni pratica e nomina GDPR come responsabile del trattamento.</p></details>
+        <details class="reveal"><summary>Su quali pratiche siete pi&ugrave; utili agli studi di {z.nome}?</summary><p>{z.partenza}</p></details>
+        <details class="reveal"><summary>Quali pratiche del territorio lavorate pi&ugrave; spesso?</summary><p>Nella {z.provincia} lavoriamo soprattutto su: {z.atti.map((a) => a.toLowerCase()).join('; ')}. Su queste tipologie i processi sono gi&agrave; codificati, quindi l'attivazione &egrave; immediata e i tempi di consegna sono quelli standard.</p></details>
+      </div>
+      <p style="text-align:center; margin-top:20px"><a href="/guide/" style="font-weight:700">Le guide operative per studi notarili &rarr;</a></p>
+    </div>
+  </section>
+
   <section class="cta-band" id="contatti" aria-labelledby="cta-local">
-    <h2 id="cta-local">Studi notarili di {z.nome}:<br><span>quali attivit&agrave; affideresti per prime?</span></h2>
-    <p>Venti minuti nel tuo studio o in videochiamata, nessuna vendita: presentiamo il progetto, ascoltiamo la prassi dello studio e — se ti convince — il pilota si attiva entro una settimana.</p>
+    <h2 id="cta-local">Studi notarili di {z.nome}:<br><span>da quale pacchetto conviene partire?</span></h2>
+    <p>Venti minuti nel tuo studio a {z.nome} o in videochiamata, nessuna vendita: ascoltiamo come lavorate oggi su {z.atti[0].toLowerCase()} e ti diciamo dove possiamo essere utili — anche se la risposta &egrave; &laquo;in nulla&raquo;.</p>
     <div class="hero-cta" style="margin-bottom:0">
       <a class="btn btn-bronze" href={`mailto:info@sartorianotarile.it?subject=Richiesta%20incontro%20%E2%80%94%20${z.nome}`}>Richiedi un incontro</a>
       <a class="btn btn-paper" href={`mailto:info@sartorianotarile.it?subject=Check-up%20GDPR%20gratuito%20%E2%80%94%20${z.nome}`}>Check-up GDPR gratuito</a>

@@ -5,7 +5,15 @@
     "provincia": "provincia di Ravenna",
     "regione": "Emilia-Romagna",
     "distretto": "Distretto Notarile di Ravenna",
-    "intro": "Siamo nati qui: la nostra sede operativa è in provincia di Ravenna e conosciamo gli studi del territorio da dentro, come partner informatico prima ancora che come back office. Per gli studi ravennati, quando serve, siamo anche fisicamente raggiungibili.",
+    "tessuto": "Un'economia a tre velocità che si riflette sugli atti: il porto e l'agroalimentare con la loro tradizione cooperativa, l'agricoltura della Bassa Romagna con proprietà spesso frazionate tra più eredi, e la fascia costiera dove il mercato delle seconde case si concentra in pochi mesi l'anno.",
+    "atti": [
+      "Compravendite residenziali e seconde case",
+      "Atti societari e cooperativi",
+      "Successioni con terreni agricoli",
+      "Mutui e cancellazioni di ipoteca"
+    ],
+    "focus": "È il nostro territorio: la sede operativa è a Fusignano e diversi studi della provincia ci conoscono già come partner informatico, prima ancora che come back office. Per gli studi ravennati questo significa poter unire il lavoro da remoto alla presenza di persona, quando serve: avvio del servizio, allineamento sui modelli, verifica dei primi risultati.",
+    "partenza": "Gli studi che ci conoscono partono in genere dalla pre-stipula, perché è dove il lavoro di coordinamento con agenzie e amministratori pesa di più. Chi lavora molto sull'agricolo aggiunge subito il post-stipula, dove le volture assorbono tempo in modo sproporzionato al valore dell'atto.",
     "comuni": [
       "Ravenna",
       "Faenza",
@@ -30,7 +38,15 @@
     "provincia": "città metropolitana di Bologna",
     "regione": "Emilia-Romagna",
     "distretto": "Distretto Notarile di Bologna",
-    "intro": "Il mercato immobiliare e societario più dinamico della regione produce volumi che mettono sotto pressione anche gli studi più strutturati: per gli studi bolognesi il nostro back office è capacità aggiuntiva immediata nei picchi, senza assunzioni e senza software da adottare.",
+    "tessuto": "Il mercato immobiliare e societario più dinamico della regione, con un terziario avanzato che genera un flusso costante di operazioni su società di capitali. La cintura — da Casalecchio a San Lazzaro, da Imola a San Giovanni in Persiceto — aggiunge un residenziale ad alta frequenza e pratiche molto standardizzabili.",
+    "atti": [
+      "Compravendite con mutuo, in volumi elevati",
+      "Costituzioni e operazioni societarie",
+      "Cessioni di quote",
+      "Atti d'impresa e verbali assembleari"
+    ],
+    "focus": "Gli studi bolognesi sono in media più strutturati che nel resto della regione, e il problema non è la mancanza di personale: è che nei picchi anche una struttura solida non riesce a rispondere con la velocità che il mercato pretende. Qui il nostro ruolo è capacità aggiuntiva immediata, non sostituzione di nessuno.",
+    "partenza": "Nell'area bolognese la partenza più frequente è il preventivo rapido: in un mercato dove il cliente confronta più studi nello stesso pomeriggio, rispondere in poche ore anziché in tre giorni cambia il tasso di acquisizione degli incarichi.",
     "comuni": [
       "Bologna",
       "Imola",
@@ -57,7 +73,15 @@
     "provincia": "provincia di Forlì-Cesena",
     "regione": "Emilia-Romagna",
     "distretto": "Distretti Notarili riuniti di Forlì e Rimini",
-    "intro": "Manifattura, agroalimentare e un tessuto di imprese familiari alimentano un flusso costante di compravendite, mutui, cessioni di quote e passaggi generazionali: pratiche ad alto contenuto documentale, che consegniamo istruite e pronte per il controllo del Notaio.",
+    "tessuto": "Manifattura, agroalimentare e ortofrutta con una prevalenza netta di imprese familiari, spesso arrivate alla seconda o terza generazione. La conseguenza sugli atti è evidente: molte cessioni di quote, patti tra soci e passaggi generazionali, tutte pratiche ad alta intensità documentale.",
+    "atti": [
+      "Cessioni di quote e passaggi generazionali",
+      "Compravendite residenziali e produttive",
+      "Atti agricoli e terreni",
+      "Costituzioni e modifiche societarie"
+    ],
+    "focus": "Il passaggio generazionale è la pratica dove il rapporto tra tempo assorbito e valore dell'atto è più sfavorevole: molti interlocutori, documenti che arrivano a pezzi, verifiche incrociate. È esattamente il tipo di lavorazione che il nostro processo assorbe meglio, perché ripetitivo nella struttura anche quando è diverso nel merito.",
+    "partenza": "Gli studi del comprensorio partono in genere dalla pre-stipula sui passaggi generazionali e sulle cessioni di quote, per poi estendere il metodo alle compravendite ordinarie una volta verificati i tempi.",
     "comuni": [
       "Forlì",
       "Cesena",
@@ -71,7 +95,6 @@
       "Mercato Saraceno",
       "Sarsina",
       "Santa Sofia",
-      "Predappio",
       "Gatteo"
     ]
   },
@@ -81,7 +104,15 @@
     "provincia": "provincia di Rimini",
     "regione": "Emilia-Romagna",
     "distretto": "Distretti Notarili riuniti di Forlì e Rimini",
-    "intro": "Turismo e ricettività rendono il mercato riminese fortemente stagionale: compravendite di strutture, cessioni d'azienda e mutui si concentrano in pochi mesi. La nostra capacità elastica assorbe i picchi e restituisce allo studio tempi di consegna certi tutto l'anno.",
+    "tessuto": "Turismo e ricettività dettano il ritmo: compravendite di alberghi e strutture, cessioni di attività ricettive, seconde case sulla costa da Bellaria a Cattolica. Il risultato è un mercato fortemente stagionale, con volumi che si concentrano in pochi mesi e poi si contraggono.",
+    "atti": [
+      "Compravendite di strutture ricettive",
+      "Cessioni di azienda e di rami",
+      "Seconde case e mutui",
+      "Atti societari del comparto turistico"
+    ],
+    "focus": "La stagionalità è il problema strutturale degli studi riminesi: una struttura dimensionata sui mesi di punta è sovradimensionata per il resto dell'anno, una dimensionata sulla media non regge l'estate. La capacità elastica risolve esattamente questo: si aumenta quando serve, si riduce quando il flusso cala, senza costi fissi aggiuntivi.",
+    "partenza": "Sulla costa la partenza tipica è mista: pre-stipula durante i mesi di punta per assorbire i picchi, post-stipula tutto l'anno perché gli adempimenti delle pratiche estive si accumulano proprio quando lo studio è più scarico di personale.",
     "comuni": [
       "Rimini",
       "Riccione",
@@ -102,7 +133,15 @@
     "provincia": "provincia di Ferrara",
     "regione": "Emilia-Romagna",
     "distretto": "Distretto Notarile di Ferrara",
-    "intro": "Tra patrimonio immobiliare storico e proprietà frazionate, le pratiche ferraresi richiedono spesso ricostruzioni di provenienza e successioni articolate: lavoro documentale paziente, che il nostro back office svolge con metodo e restituisce ordinato e verificato.",
+    "tessuto": "Patrimonio immobiliare storico nel centro e proprietà molto frazionate nel territorio, con un'agricoltura estesa dal Copparese al Delta e un polo meccanico nel Centese. Ne derivano pratiche con provenienze articolate, spesso per successione, e ricostruzioni documentali che richiedono pazienza.",
+    "atti": [
+      "Successioni e divisioni",
+      "Compravendite con provenienze complesse",
+      "Atti agricoli e terreni",
+      "Atti d'impresa nel Centese"
+    ],
+    "focus": "Nel ferrarese la parte critica non è la redazione: è ricostruire la storia dell'immobile. Provenienze per successione, accettazioni tacite, continuità delle trascrizioni da verificare a ritroso. È lavoro documentale metodico, che svolgiamo con procedure codificate e restituiamo ordinato, con le criticità già evidenziate.",
+    "partenza": "Gli studi ferraresi partono quasi sempre dalla pre-stipula, e in particolare dalle visure con interpretazione: ricevere la sintesi delle risultanze invece del plico da leggere è il primo tempo che si recupera.",
     "comuni": [
       "Ferrara",
       "Cento",
@@ -125,7 +164,15 @@
     "provincia": "provincia di Modena",
     "regione": "Emilia-Romagna",
     "distretto": "Distretto Notarile di Modena",
-    "intro": "Nel cuore della motor valley, della ceramica e della meccanica emiliana, gli studi modenesi gestiscono un societario intenso: costituzioni, operazioni straordinarie, patti tra soci. Prepariamo pratiche camerali e bozze sullo stile dello studio, con i volumi che il territorio richiede.",
+    "tessuto": "Quattro distretti industriali in una sola provincia: la motor valley intorno a Maranello, la ceramica di Sassuolo e Fiorano, il tessile-abbigliamento di Carpi, la meccanica diffusa lungo la via Emilia. Il societario che ne deriva è intenso e ricorrente, con operazioni sul capitale e riorganizzazioni di gruppo.",
+    "atti": [
+      "Costituzioni e operazioni straordinarie",
+      "Patti tra soci e cessioni di quote",
+      "Compravendite industriali e residenziali",
+      "Pratiche Registro Imprese ricorrenti"
+    ],
+    "focus": "Il societario modenese ha una caratteristica che lo rende ideale per la standardizzazione: gli atti sono numerosi e ripetitivi nella struttura, mentre il contenuto varia. La pratica camerale che segue l'atto — modulistica, allegati, distinte — assorbe spesso più tempo dell'atto stesso, e non richiede la mano del notaio.",
+    "partenza": "Nel modenese la partenza più efficace è il post-stipula sul societario: l'atto è di quindici minuti, la pratica camerale di quarantacinque. I quarantacinque li facciamo noi.",
     "comuni": [
       "Modena",
       "Carpi",
@@ -151,7 +198,15 @@
     "provincia": "provincia di Rovigo",
     "regione": "Veneto",
     "distretto": "Distretto Notarile di Rovigo",
-    "intro": "Nel Polesine, dove gli studi sono spesso strutture snelle, ogni assenza o picco di lavoro pesa il doppio: il nostro back office da remoto è il collaboratore aggiuntivo che entra in campo solo quando serve, senza costi fissi per lo studio.",
+    "tessuto": "Il Polesine è un territorio a bassa densità con un'agricoltura estesa fino al Delta e un tessuto di piccole imprese. Gli studi notarili sono in prevalenza strutture snelle, con uno o due collaboratori, dove l'organizzazione dipende molto dalle singole persone.",
+    "atti": [
+      "Compravendite agricole e residenziali",
+      "Successioni e divisioni",
+      "Atti agrari e terreni",
+      "Atti di piccole imprese familiari"
+    ],
+    "focus": "In uno studio con due collaboratori, un'assenza o un picco pesano il doppio rispetto a una struttura grande: non c'è margine di riassorbimento interno. Qui il servizio funziona come collaboratore aggiuntivo che entra in campo solo quando serve — un periodo di ferie, una maternità, un mese con troppe stipule — senza costi fissi negli altri mesi.",
+    "partenza": "Nel Polesine si parte in genere dalla pre-stipula nei periodi di punta, come capacità aggiuntiva temporanea, e diversi studi la stabilizzano dopo aver verificato che i tempi di consegna tengono.",
     "comuni": [
       "Rovigo",
       "Adria",
