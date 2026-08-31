@@ -1,9 +1,15 @@
 # Sartoria Notarile — Giamor Group S.r.l.
 
-> Servizi operativi di supporto per studi notarili in Italia: presa in carico delle
-> richieste dei clienti, predisposizione dei preventivi, raccolta e verifica dei
-> documenti, coordinamento con clienti/agenzie/amministratori di condominio/tecnici/banche,
-> organizzazione del fascicolo digitale e predisposizione delle bozze. In aggiunta:
+> Servizi operativi di supporto per studi notarili in Italia, organizzati in tre
+> pacchetti di lavorazione per l'atto di compravendita:
+> 1) PREVENTIVO RAPIDO — inquadramento della richiesta del cliente, dati per la
+>    quantificazione, bozza di preventivo secondo i criteri dello studio.
+> 2) PRE-STIPULA — checklist documentale, richiesta al cliente, coordinamento e
+>    solleciti verso agenzie/amministratori/tecnici/banche, visure eseguite e lette,
+>    dati verificati, criticità segnalate, fascicolo ordinato e bozza predisposta.
+> 3) POST-STIPULA — registrazione, trascrizione e voltura, comunicazioni a banche,
+>    agenzie e amministratore, copie, archiviazione del fascicolo, presidio scadenze.
+> Nuovi pacchetti in arrivo su altri atti (mutui, societario, successioni, donazioni). In aggiunta:
 > servizi IT gestiti per studi notarili (infrastruttura, cloud, Microsoft 365,
 > cybersecurity, adeguamento GDPR). Le attività riservate al notaio (valutazione
 > giuridica, controllo di legalità, identificazione delle parti, ricevimento dell'atto)
@@ -14,8 +20,14 @@ C.F./P. IVA: 02823670399 — REA RA-263007 — Tel: +39 388 407 9916
 Email: info@sartorianotarile.it
 Destinatari del servizio: esclusivamente studi notarili (non privati).
 Modalità: da remoto, senza software da installare. Tempi: pratiche standard entro
-2 giornate lavorative, complesse 3-4, urgenze entro 12 ore. Costi per attività svolta
-(pacchetti a prezzo certo, abbonamento o carnet).
+2 giornate lavorative, complesse 3-4, urgenze entro 12 ore. Costi per pacchetto di
+lavorazione a prezzo certo (abbonamento o carnet); prezzi comunicati su richiesta.
+Efficienza: processo automatizzato con AI documentale, oggi -40/-50% di tempo di
+lavorazione rispetto all'esecuzione manuale interna, obiettivo fino a -70% al termine
+della fase pilota; per lo studio il costo risulta -30/-40% rispetto alla gestione interna
+e le ore assorbite scendono a zero.
+Programma pilota riservato ai primi 10 studi: condizioni economiche riservate nel tempo,
+allineamento senza costi di setup, priorità di lavorazione, voce sui pacchetti futuri.
 Territori serviti: province di Ravenna, Bologna, Forlì-Cesena, Rimini, Ferrara,
 Modena, Rovigo e resto d'Italia da remoto.
 
@@ -27,5 +39,8 @@ Modena, Rovigo e resto d'Italia da remoto.
 
 ## Pagine principali
 - [Home — servizi e modello](https://www.sartorianotarile.it/)
+- [I pacchetti di lavorazione](https://www.sartorianotarile.it/pacchetti/)
+- [IT, cloud e cybersecurity per studi notarili](https://www.sartorianotarile.it/it-cyber/)
+- [Progetto pilota — primi 10 studi](https://www.sartorianotarile.it/pilota/)
 - [Costi e modello economico](https://www.sartorianotarile.it/costi/)
 - [Contatti](https://www.sartorianotarile.it/contatti/)

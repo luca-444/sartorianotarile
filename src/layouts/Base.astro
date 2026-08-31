@@ -350,6 +350,9 @@ const canonicalURL = new URL(canonical, Astro.site);
   .dark .lever h4{color:var(--paper)}
   .dark .lever p{color:var(--dark-text)}
   @media(max-width:640px){ .lever{gap:12px} .lever .dot{width:32px; height:32px} }
+
+  .flow-3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){ .flow-3{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
